@@ -4,14 +4,16 @@ package tradegame;
 public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
     int FoodPrice = 2;
     int JewelryPrice = 50;
-    A1_LizzaRobinhood(){
-    this("hi");
-    System.out.println("See you around.");
-    }
-    A1_LizzaRobinhood(String x){
+    A1_LizzaRobinhood(int Medical,int Weapon,int Food,int Jewelry,int Gold){
+    PlayerMedical = Medical ;
+    PlayerWeapon =  Weapon ;
+    PlayerFood = Food ;
+    PlayerJewelry = Jewelry ;
+    PlayerGold = Gold;
     System.out.println("[Person:Lizza Robinhood]"); ///////this constructor will have been called 3rd 
     System.out.println("What can I help you?"); 
     Greeting();
+    System.out.println("See you around.");
     }
     void Greeting(){
     System.out.println("(1) Can I ask you something ?"

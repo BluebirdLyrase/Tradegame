@@ -15,15 +15,6 @@ abstract class City extends Scan {
     abstract void Drinking();
     abstract void Greeting();
     
-    City(){
-    PlayerMedical = player.getMedical();
-    PlayerWeapon = player.getWeapon();
-    PlayerFood = player.getFood();
-    PlayerJewelry = player.getJewelry();
-    PlayerMen = player.getMen();
-    PlayerGold = player.getGold();
-    }
-    
     char ScannerSwitch(){
     String Desire ;
     Scanner Sc = new Scanner(System.in);

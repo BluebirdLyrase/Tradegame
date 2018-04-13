@@ -14,12 +14,14 @@ public class demo {
             
                 switch(player.ScannerSwitch(4)){
                     case 1 : System.out.println("Entering Lizza Good store");
-                        A1_LizzaRobinhood Lizz = new A1_LizzaRobinhood();
+                        A1_LizzaRobinhood Lizz = new A1_LizzaRobinhood(player.getMedical(),player.getWeapon(),player.getFood(),
+                                                                       player.getJewelry(),player.getGold());
                         player.setPlayerInventory(Lizz.PlayerMedical,Lizz.PlayerWeapon,Lizz.PlayerFood,
-                                                    Lizz.PlayerMen,Lizz.PlayerJewelry,Lizz.PlayerGold );
+                                                     Lizz.PlayerMen,Lizz.PlayerJewelry,Lizz.PlayerGold );
                         player.SetNpcRelation(0,true);
     //System.out.println(    player.GetNpcRelation(0));
                         player.ShowInventory();
+                        Waterflake();
                         break;
                     case 2 : //jack
                     case 3 : //someone
