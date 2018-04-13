@@ -7,6 +7,18 @@ CityWaterflake(){System.out.print("[City:Waterflake]_");}///////this constructor
 
 //CityWaterflake(String x){System.out.println("Everyone in waterflakes can trade things to anothers things");}
 
+CityWaterflake(int PlayerMedical,int PlayerWeapon,int PlayerFood,
+              int PlayerJewelry,int PlayerMen,int PlayerGold){
+    this.PlayerMedical = PlayerMedical ;
+    this.PlayerWeapon =  PlayerWeapon ;
+    this.PlayerFood = PlayerFood ;
+    this.PlayerJewelry = PlayerJewelry ;
+    this.PlayerMen = PlayerMen ;
+    this.PlayerGold = PlayerGold;
+}
+
+abstract  void FreeTrade();
+
 int QuantityTrade(String check,int PlayerQuantity,int HowMany){
     if(check.equals("+")) return  PlayerQuantity + HowMany;
     else return PlayerQuantity-HowMany;

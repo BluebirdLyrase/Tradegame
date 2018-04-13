@@ -4,13 +4,11 @@ package tradegame;
 public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
     int FoodPrice = 2;
     int JewelryPrice = 50;
-    A1_LizzaRobinhood(int Medical,int Weapon,int Food,int Jewelry,int Gold){
-    PlayerMedical = Medical ;
-    PlayerWeapon =  Weapon ;
-    PlayerFood = Food ;
-    PlayerJewelry = Jewelry ;
-    PlayerGold = Gold;
-    System.out.println("[Person:Lizza Robinhood]"); ///////this constructor will have been called 3rd 
+    A1_LizzaRobinhood(int PlayerMedical,int PlayerWeapon,int PlayerFood,
+                      int PlayerJewelry,int PlayerMen,int PlayerGold){    
+    super(PlayerMedical,PlayerWeapon,PlayerFood,
+          PlayerJewelry,PlayerMen,PlayerGold);    
+    System.out.println("[Person:Lizza Robinhood]");
     System.out.println("What can I help you?"); 
     Greeting();
     System.out.println("See you around.");
@@ -71,15 +69,16 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
     System.out.println("Sorry, but I do not want to drink for some reason.");
     Greeting();
     }
-    public void  Trade(){ 
+    public void  Trade(){
+    System.out.println("[Your Gold : "+PlayerGold+" ]");    
     System.out.println("(1) I want to buy some food(1/"+FoodPrice+"gold)"
             + "\n(2) I want to buy some jewelry(1/"+JewelryPrice+"gold)"
             + "\n(3) I want to buy some medical supply(1/"+MedicalPrice+"gold)"   
             + "\n(4) I want to buy some weapon supply(1/"+WeaponPrice+"gold)"  
-            + "\n(5) I want to sell some Food(1/"+(FoodPrice/2)+"gold)"
-            + "\n(6) I want to sell some Jewelry(1/"+(JewelryPrice/2)+"gold)"
-            + "\n(7) I want to sell some medical(1/"+(MedicalPrice/2)+"gold)"
-            + "\n(8) I want to sell some weapon(1/"+(WeaponPrice/2)+"gold)"        
+            + "\n(5) I want to sell some Food(1/"+(FoodPrice/2)+"gold),[You have:"+PlayerFood+" Food]"
+            + "\n(6) I want to sell some Jewelry(1/"+(JewelryPrice/2)+"gold),[You have:"+PlayerJewelry+" Jewelry]"
+            + "\n(7) I want to sell some medical(1/"+(MedicalPrice/2)+"gold),[You have:"+PlayerMedical+" Medical]"
+            + "\n(8) I want to sell some weapon(1/"+(WeaponPrice/2)+"gold),[You have:"+PlayerWeapon+" Weapon]"      
             + "\n(9) Let talk about something else");
     switch(ScannerSwitch(9)){
       /////PLAYER BUYING      
@@ -131,9 +130,9 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
     }  
     void FreeTrade(){
         
-    System.out.println("(1) I want to trade Jewelry to Food"
-            + "\n(2) I want to trade Medical to Food"  
-            + "\n(3) I want to trade Weapon to Food"        
+    System.out.println("(1) I want to trade Jewelry to Food(1/30),[You have:"+PlayerJewelry+" Jewelry]"
+            + "\n(2) I want to trade Medical to Food(1/6),[You have:"+PlayerMedical+" Medical]"  
+            + "\n(3) I want to trade Weapon to Food(1/6),[You have:"+PlayerWeapon +" Weapon]"        
             + "\n(4) Let talk about something else");
     
     switch(ScannerSwitch(4)){

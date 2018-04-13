@@ -1,5 +1,6 @@
 
 package tradegame;
+///this Connect to Github
 public class demo {
     static Player player = new Player();
     public static void main(String args[]){
@@ -15,16 +16,19 @@ public class demo {
                 switch(player.ScannerSwitch(4)){
                     case 1 : System.out.println("Entering Lizza Good store");
                         A1_LizzaRobinhood Lizz = new A1_LizzaRobinhood(player.getMedical(),player.getWeapon(),player.getFood(),
-                                                                       player.getJewelry(),player.getGold());
+                                                                       player.getJewelry(),player.getMen(),player.getGold());
                         player.setPlayerInventory(Lizz.PlayerMedical,Lizz.PlayerWeapon,Lizz.PlayerFood,
                                                      Lizz.PlayerMen,Lizz.PlayerJewelry,Lizz.PlayerGold );
-                        player.SetNpcRelation(0,true);
-    //System.out.println(    player.GetNpcRelation(0));
                         player.ShowInventory();
                         Waterflake();
                         break;
+                        
                     case 2 : //jack
-                    case 3 : //someone
+                        
+                    case 3 :A3_PriscillaRose Rose = new A3_PriscillaRose(player.getMedical(),player.getWeapon(),player.getFood(),
+                                                                       player.getJewelry(),player.getMen(),player.getGold());
+                        
+                    
                     case 4 : ChooseCity();break;
         }//switch
     }//medthod wtf
@@ -41,8 +45,6 @@ public class demo {
                     case 3 : //Redapple
                         }
         }//medthod CC
-    
-    
 }//class
 
 

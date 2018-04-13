@@ -1,11 +1,15 @@
 
 package tradegame;
 public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
-    A3_PriscillaRose(){
-    System.out.println("[Npc:Priscilla Rosed]"); ///////this constructor will have been called 3rd 
+    A3_PriscillaRose(int PlayerMedical,int PlayerWeapon,int PlayerFood,
+                      int PlayerJewelry,int PlayerMen,int PlayerGold){    
+    super(PlayerMedical,PlayerWeapon,PlayerFood,
+          PlayerJewelry,PlayerMen,PlayerGold);   
+    
+    System.out.println("[Npc:Priscilla Rose]"); ///////this constructor will have been called 3rd 
     System.out.println("Welcome to Heartwarming inn"); 
     Greeting();
-    System.out.println("See you around.");
+    System.out.println("See you soon.");
     }
     
     
@@ -19,10 +23,10 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
             
             switch(ScannerSwitch(6)){
                 case 1 : Asking() ;break ;    
-                case 2 : break ;   
+                case 2 : Drinking();break ;   
                 case 3 : break ;   
-                case 4 : break ;   
-                case 5 : break ;   
+                case 4 : HireMan();break ;   
+                case 5 : FreeTrade(); break ;   
                 case 6 : break ;   
                 
             }
@@ -30,8 +34,14 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
      
      }
      
-     
+     void Sleeping(){
+     //player got Nightmare about halfBeastmonster
+     }
      void Asking(){}
-     void Drinking(){}
+     void Drinking(){
+     //she tell that Jack already death
+     //Nightmare about halfBeastmonster
+     }
      public void HireMan(){}
+     void FreeTrade(){}
 }

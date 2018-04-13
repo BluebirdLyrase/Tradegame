@@ -11,16 +11,6 @@ package tradegame;
  */
 public class Player extends Scan {
     
-    private boolean[] NpcRelation = {false,false,false,false,false,false,false,false,false};
-    //[0] Lizza
-    //[1] Jackass
-    //[2] 
-    //[3]
-    //[4]
-    //[5]
-    //[6]
-    //[7]
-    //[8]
     private int Medical = 10 ;
     private int Weapon = 10  ;
     private int Food = 10  ;
@@ -32,12 +22,16 @@ public class Player extends Scan {
     private boolean ArtifactCheck = Artifact[0]&&Artifact[1]&&Artifact[2];
     private String[] ArtifactName ={"-Waterflake Ancient Necklace","-Soul Magic Knownage","-Dragon's egg"};
     private String[] ShowInventoryName = {"Gold","Medical","Weapon","Food","Jewelry","Manpower"};
-    
     boolean[] drunk = {false,false,false,false,false,false,false,false}; 
-    
-
-    
-    
+    //[0] Jack
+    //[1] Priscilla
+    //[2] 
+    //[3] 
+    //[4] 
+    //[5] 
+    //[6] 
+    //[7] 
+ 
     void ShowInventory(){
         System.out.println("[Supply]");
         int[] ShowInventoryQuantity = {Gold,Medical,Weapon,Food,Jewelry,Men};
@@ -101,14 +95,6 @@ public class Player extends Scan {
     this.Men = Men  ;
     this.Jewelry = Jewelry  ;
     this.Gold = Gold ;
-    }
-    
-    void SetNpcRelation(int position, boolean Relation){
-    NpcRelation[position] = Relation;
-    }
-    
-    boolean GetNpcRelation(int position){
-    return NpcRelation[position];
     }
     
     char CheckEnding(){
