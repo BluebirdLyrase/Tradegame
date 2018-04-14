@@ -23,10 +23,21 @@ public class demo {
                         Waterflake();
                         break;
                         
-                    case 2 : //jack
+                    case 2 : A2_JackBlergen Jack = new A2_JackBlergen(player.getMedical(),player.getWeapon(),player.getFood(),
+                                                                      player.getJewelry(),player.getMen(),player.getGold());
+                        player.setPlayerInventory(Jack.PlayerMedical,Jack.PlayerWeapon,Jack.PlayerFood,
+                                                  Jack.PlayerJewelry,Jack.PlayerMen,Jack.PlayerGold);
+                        player.ShowInventory();
+                        Waterflake();
+                        break;
                         
                     case 3 :A3_PriscillaRose Rose = new A3_PriscillaRose(player.getMedical(),player.getWeapon(),player.getFood(),
                                                                        player.getJewelry(),player.getMen(),player.getGold());
+                        player.setPlayerInventory(Rose.PlayerMedical,Rose.PlayerWeapon,Rose.PlayerFood,
+                                                  Rose.PlayerJewelry,Rose.PlayerMen,Rose.PlayerGold);
+                        player.ShowInventory();
+                        Waterflake();
+                        break;
                         
                     
                     case 4 : ChooseCity();break;
