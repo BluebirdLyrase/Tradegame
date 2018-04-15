@@ -31,7 +31,6 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
             case 5 :   break ; 
     }
     }
-    
     void Asking(){
     System.out.println("(1) Tell me about Waterflake."
             + "\n(2) Tell me about Drylagoon."
@@ -64,7 +63,7 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
     case 5 : ; Greeting(); break ;
     }
 
-    }   
+    }
     void Drinking(){
     System.out.println("Sorry, but I do not want to drink for some reason.");
     Greeting();

@@ -9,6 +9,10 @@ package tradegame;
  *
  * @author 6030213005
  */
-interface Crafter {
-    abstract void Commission();
+public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
+    void Asking(){} 
+    void Drinking(){}
+    void Greeting(){}
+    void  MagicTeach(){}
+    public void Explor(){}
 }

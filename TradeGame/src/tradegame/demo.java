@@ -7,8 +7,9 @@ public class demo {
         
         System.out.println("Story blaqqq");
         Waterflake();
-        
-
+        Drylagoon();
+        Redapple();
+        player.Ending(player.CheckEnding());
     }
     
         public static void Waterflake(){
@@ -40,22 +41,13 @@ public class demo {
                         break;
                         
                     
-                    case 4 : ChooseCity();break;
+                    case 4 :;
         }//switch
     }//medthod wtf
 
         public static void Drylagoon(){}        
         public static void Redapple(){}  
         
-        public static void ChooseCity(){   
-        System.out.println("choose mata fuker");
-                    player.Ending(player.CheckEnding());
-                    switch(player.ScannerSwitch(3)){
-                    case 1 : Waterflake();
-                    case 2 : //Dralagoon
-                    case 3 : //Redapple
-                        }
-        }//medthod CC
 }//class
 
 

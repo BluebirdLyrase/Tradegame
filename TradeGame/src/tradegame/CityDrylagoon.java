@@ -11,5 +11,5 @@ package tradegame;
  */
 abstract class CityDrylagoon extends City {
 //Everyone in Drylagoon can use magic
-abstract void  MagicTeacher();    
+abstract void  MagicTeach();    
 }
