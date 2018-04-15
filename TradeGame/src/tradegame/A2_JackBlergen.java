@@ -29,7 +29,7 @@ public class A2_JackBlergen extends CityWaterflake implements Explorer {
             }
     }
     void Drinking(){
-    System.out.println("");
+    System.out.println("-DRINKING-");
     Greeting();
     }
     void Asking(){
