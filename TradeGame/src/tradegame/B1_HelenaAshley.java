@@ -10,15 +10,15 @@ package tradegame;
  * @author 6030213005
  */
 public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
-  
+    
     B1_HelenaAshley(int PlayerMedical,int PlayerWeapon,int PlayerFood,
                       int PlayerJewelry,int PlayerMen,int PlayerGold){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
           PlayerJewelry,PlayerMen,PlayerGold);    
-    System.out.println("[Person:Lizza Robinhood]");
-    System.out.println("Lizza: Welcome to Lizza Good store What can I help you?"); 
+    System.out.println("[Person:Helena Ashley]");
+    System.out.println("Helena: -GREET-"); 
     Greeting();
-    System.out.println("Lizza: See you around.");
+    System.out.println("Helena: -BYE-");
     }
 
 

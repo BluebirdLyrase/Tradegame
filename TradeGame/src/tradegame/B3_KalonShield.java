@@ -15,10 +15,10 @@ public class B3_KalonShield extends CityDrylagoon implements Guardian  {
                       int PlayerJewelry,int PlayerMen,int PlayerGold){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
           PlayerJewelry,PlayerMen,PlayerGold);    
-    System.out.println("[Person:Lizza Robinhood]");
-    System.out.println("Lizza: Welcome to Lizza Good store What can I help you?"); 
+    System.out.println("[Person:Kalon Shield]");
+    System.out.println("Kalon: -GREET-"); 
     Greeting();
-    System.out.println("Lizza: See you around.");
+    System.out.println("Kalon: -BYE-");
     }
     
     void Greeting(){
