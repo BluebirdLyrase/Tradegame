@@ -23,15 +23,22 @@ public class demo {
                         player.ShowInventory();
                         Waterflake();
                         break;
-                        
-                    case 2 : A2_JackBlergen Jack = new A2_JackBlergen(player.getMedical(),player.getWeapon(),player.getFood(),
+                    ////////////////////////////////////////////////////////////////////////////////////////////////////   
+                    case 2 : 
+                        if(player.GetArtifact(0)){
+                        System.out.println("'He is gone'");    
+                        }else{
+                        A2_JackBlergen Jack = new A2_JackBlergen(player.getMedical(),player.getWeapon(),player.getFood(),
                                                                       player.getJewelry(),player.getMen(),player.getGold());
                         player.setPlayerInventory(Jack.PlayerMedical,Jack.PlayerWeapon,Jack.PlayerFood,
                                                   Jack.PlayerJewelry,Jack.PlayerMen,Jack.PlayerGold);
+                        if(Jack.Necklace)player.SetArtifact(0);
                         player.ShowInventory();
+                        }
                         Waterflake();
-                        break;
                         
+                        break;
+                    ////////////////////////////////////////////////////////////////////////////////////////////////////       
                     case 3 :A3_PriscillaRose Rose = new A3_PriscillaRose(player.getMedical(),player.getWeapon(),player.getFood(),
                                                                        player.getJewelry(),player.getMen(),player.getGold());
                         player.setPlayerInventory(Rose.PlayerMedical,Rose.PlayerWeapon,Rose.PlayerFood,

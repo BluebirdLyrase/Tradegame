@@ -23,14 +23,14 @@ abstract class City extends Scan {
     System.out.println("-----------------------------------------------------");
     return Desire.charAt(0);
     }
-    int ScannerTrade(){///to set Quantity
+    int ScannerTrade(){///to set Quantity for merchant , Scan other int
     Scanner Sc2 = new Scanner(System.in);
     return Sc2.nextInt();
     }
     void GoldSetter(String check){
     if(check.equals("+")) PlayerGold = TotalPrice+PlayerGold;
     else PlayerGold = PlayerGold-TotalPrice;    
-    }  
+    }
     int QuantitySetter(String check,int PlayerQuantity){
     if(check.equals("+")) return  PlayerQuantity+Quantity;
     else return PlayerQuantity-Quantity;

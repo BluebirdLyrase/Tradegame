@@ -1,19 +1,22 @@
 package tradegame;
 
 public class A2_JackBlergen extends CityWaterflake implements Explorer {
+    int ExplorCost = 100 ;
+    boolean Necklace = false;
     A2_JackBlergen(int PlayerMedical, int PlayerWeapon, int PlayerFood,
                     int PlayerJewelry, int PlayerMen, int PlayerGold){
     super(PlayerMedical,PlayerWeapon,PlayerFood,
             PlayerJewelry,PlayerMen,PlayerGold);
     System.out.println("[Person:Jack Blergen]");
-    System.out.println("-GREET-");
+    System.out.println("Jack: What?");
     Greeting();
-    System.out.println("-BYE-");
+    System.out.println("...");
     }
     void Greeting(){
+    System.out.println("Jack: What do you want form the old man?");
     System.out.println("(1) Can I ask you something ?"
             +"\n(2) How about a drink ?"
-            +"\n(3) To Explor."
+            +"\n(3) I want to hire you get that artifact for me[require:"+ExplorCost+" gold]."
             +"\n(4) Let trade things to another things."
             +"\n(5) I need to go.");
             switch(ScannerSwitch(5)){
@@ -21,7 +24,7 @@ public class A2_JackBlergen extends CityWaterflake implements Explorer {
                 case 2 : Drinking(); break;
                 case 3 : Explor(); break;
                 case 4 : System.out.println("People in Waterflake always like to trading things by things.");
-                    FreeTrade(); break;
+                FreeTrade(); break;
                 default : break;
             }
     }
@@ -30,13 +33,13 @@ public class A2_JackBlergen extends CityWaterflake implements Explorer {
     Greeting();
     }
     void Asking(){
-    System.out.println("(1) Tell me about Waterflake."
+    System.out.println("(1) Tell me about the artifact."
             + "\n(2) Tell me about Drylagoon."
             + "\n(3) Tell me about Redapple."
             + "\n(4) Tell me about yourself."
             + "\n(5) Let talk about something else.");
             switch(ScannerSwitch(5)){
-                case 1 : System.out.println("-Waterflake-"); 
+                case 1 : System.out.println(": Waterflake-"); 
                          Asking(); break;
                 case 2 : System.out.println("-Drylagoon-"); 
                          Asking(); break;
@@ -48,7 +51,15 @@ public class A2_JackBlergen extends CityWaterflake implements Explorer {
             }
     }
     public void Explor(){
-    
+        if(ExplorCost>PlayerGold){System.out.println("Look like you don't have enough gold for that young boy.");
+        Asking();
+        }else{
+        System.out.println("Finally someone with the eyes");
+        PlayerGold = PlayerGold - ExplorCost ;
+        System.out.println("'At night Jack comeback and give you $!!#$!%@% "
+                + "\n and you never see him agian'");
+        Necklace = true ;
+        }
     }
     void FreeTrade(){
     System.out.println("(1) I want to trade Weapon to Food."

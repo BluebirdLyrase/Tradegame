@@ -10,8 +10,8 @@ package tradegame;
  * @author 6030213005
  */
 public class B3_KalonShield extends CityDrylagoon  {
-    void  MagicTeach(){}    
-    void Asking(){} 
+    void  MagicTeach(){}
+    void Asking(){}
     void Drinking(){}
     void Greeting(){}
     void Report(){}

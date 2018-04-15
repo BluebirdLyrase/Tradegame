@@ -11,9 +11,9 @@ package tradegame;
  */
 public class B2_MickerGorn extends CityDrylagoon implements Merchant {
     //he will ask you to kill helena when he drink with you by posion her while drinking
+    void Greeting(){}
     void Asking(){} 
     void Drinking(){}
-    void Greeting(){}
     void  MagicTeach(){}
     public void Trade(){}
     public void PlayerSelling(String WhatIsIt,int HowMuch,int HowMany){}

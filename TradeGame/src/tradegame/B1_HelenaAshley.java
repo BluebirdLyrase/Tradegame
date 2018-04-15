@@ -10,9 +10,9 @@ package tradegame;
  * @author 6030213005
  */
 public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
-    void Asking(){} 
+    void Greeting(){} 
+    void Asking(){}
     void Drinking(){}
-    void Greeting(){}
     void  MagicTeach(){}
     public void Explor(){}
 }

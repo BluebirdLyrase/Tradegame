@@ -18,7 +18,7 @@ public class Player extends Scan {
     private int Jewelry = 10  ;
     private int Days = 0  ;
     private int Gold = 10000 ;
-    boolean[] Artifact = {false,false,false};
+    private boolean[] Artifact = {false,false,false};
     private boolean ArtifactCheck = Artifact[0]&&Artifact[1]&&Artifact[2];
     private String[] ArtifactName ={"-Waterflake Ancient Necklace","-Soul Magic Knownage","-Dragon's egg"};
     private String[] ShowInventoryName = {"Gold","Medical","Weapon","Food","Jewelry","Manpower"};
@@ -47,16 +47,6 @@ public class Player extends Scan {
         i++;
         }
         }
-        /*System.out.println("[Artifact]");
-        if(Artifact[0]){System.out.println("- Waterflake Ancient Necklace");}
-        // Drink with A_Jack
-        if(Artifact[1]){System.out.println("- Soul Magic Knownage");}
-        // Trigger by learn basic spell form helena
-        if(Artifact[2]){System.out.println("- Dragon's egg ");}
-        //Flame protection spell
-        //Mana clash spell
-        //Man power
-        //Monters hunter*/
     }
     
 ////////////////////////////////////////////////////////////
@@ -108,7 +98,14 @@ public class Player extends Scan {
         case '0' : //do nothing
     
     }
+    }
     
+    void SetArtifact(int position){
+    Artifact[position] = true;
+    }
+    
+    boolean GetArtifact(int position){
+    return Artifact[position];
     }
     
 }
