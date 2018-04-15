@@ -10,6 +10,17 @@ package tradegame;
  * @author 6030213005
  */
 public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer {
+    
+    C1_GabrielSnyder(int PlayerMedical,int PlayerWeapon,int PlayerFood,
+                      int PlayerJewelry,int PlayerMen,int PlayerGold){    
+    super(PlayerMedical,PlayerWeapon,PlayerFood,
+          PlayerJewelry,PlayerMen,PlayerGold);    
+    System.out.println("[Person:Lizza Robinhood]");
+    System.out.println("Lizza: Welcome to Lizza Good store What can I help you?"); 
+    Greeting();
+    System.out.println("Lizza: See you around.");
+    }
+    
     void Greeting(){} 
     void Asking(){}
     void Drinking(){}

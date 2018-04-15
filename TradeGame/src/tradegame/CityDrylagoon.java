@@ -10,6 +10,17 @@ package tradegame;
  * @author 6030213005
  */
 abstract class CityDrylagoon extends City {
+    
+ CityDrylagoon (int PlayerMedical,int PlayerWeapon,int PlayerFood,
+                int PlayerJewelry,int PlayerMen,int PlayerGold){
+    this.PlayerMedical = PlayerMedical ;
+    this.PlayerWeapon =  PlayerWeapon ;
+    this.PlayerFood = PlayerFood ;
+    this.PlayerJewelry = PlayerJewelry ;
+    this.PlayerMen = PlayerMen ;
+    this.PlayerGold = PlayerGold;
+}
+
 //Everyone in Drylagoon can use magic
 abstract void  MagicTeach();    
 }

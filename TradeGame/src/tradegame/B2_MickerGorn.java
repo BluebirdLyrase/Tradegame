@@ -11,6 +11,16 @@ package tradegame;
  */
 public class B2_MickerGorn extends CityDrylagoon implements Merchant {
     //he will ask you to kill helena when he drink with you by posion her while drinking
+    B2_MickerGorn (int PlayerMedical,int PlayerWeapon,int PlayerFood,
+                      int PlayerJewelry,int PlayerMen,int PlayerGold){    
+    super(PlayerMedical,PlayerWeapon,PlayerFood,
+          PlayerJewelry,PlayerMen,PlayerGold);    
+    System.out.println("[Person:Lizza Robinhood]");
+    System.out.println("Lizza: Welcome to Lizza Good store What can I help you?"); 
+    Greeting();
+    System.out.println("Lizza: See you around.");
+    }
+    
     void Greeting(){
     System.out.println("(1) -ASKING-"
             + "\n(2) -DRINKING-"
