@@ -9,7 +9,7 @@ package tradegame;
  *
  * @author 6030213005
  */
-public class B3_KalonShield extends CityDrylagoon  {
+public class B3_KalonShield extends CityDrylagoon implements Guardian  {
     void Greeting(){
     System.out.println("(1) -ASKING-"
             + "\n(2) -DRINKING-"
@@ -47,7 +47,7 @@ public class B3_KalonShield extends CityDrylagoon  {
     Greeting();
     }
     void MagicTeach(){}
-    void Report(){}
+    public void Report(){}
     //report about Micker want to murder Helena
     //report about Helena have Life Magic mutent potion 
 }

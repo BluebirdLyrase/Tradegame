@@ -4,6 +4,6 @@
  * and open the template in the editor.
  */
 package tradegame;
-interface Explorer {
-    abstract void Explor();
+interface Guardian {
+    void Report();
 }
