@@ -1,13 +1,15 @@
 package tradegame;
 import java.util.Scanner ;
 abstract class City extends Scan {
-    int PlayerMedical,PlayerWeapon,PlayerFood,PlayerJewelry,PlayerMen,PlayerGold;
+    int PlayerMedical,PlayerWeapon,PlayerFood,PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol;
     int MedicalPrice = 10 ;
     int WeaponPrice = 10;
     int FoodPrice = 10; 
     int JewelryPrice = 10; 
     int Manprice = 10; 
+    int Alcoholprice = 100 ;
     int Quantity,TotalPrice  ;
+    boolean drinking;
     String Name ; 
     static Player player = new Player();
     

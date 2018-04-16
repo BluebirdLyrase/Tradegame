@@ -12,9 +12,9 @@ package tradegame;
 public class B2_MickerGorn extends CityDrylagoon implements Merchant {
     //he will ask you to kill helena when he drink with you by posion her while drinking
     B2_MickerGorn (int PlayerMedical,int PlayerWeapon,int PlayerFood,
-                      int PlayerJewelry,int PlayerMen,int PlayerGold){    
+                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
-          PlayerJewelry,PlayerMen,PlayerGold);    
+          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);    
     System.out.println("[Person:Micker Gorn]");
     System.out.println("Micker: -GREET-"); 
     Greeting();
@@ -57,7 +57,9 @@ public class B2_MickerGorn extends CityDrylagoon implements Merchant {
     System.out.println("-DRINKING-");
     Greeting();
     }
+    
     void  MagicTeach(){}
+    
     public void Trade(){
     System.out.println("[Your Gold : "+PlayerGold+" ]");    
     System.out.println("(1) I want to buy some food(1/"+FoodPrice+"gold)"

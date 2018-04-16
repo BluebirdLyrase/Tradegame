@@ -1,17 +1,23 @@
 package tradegame;
 
 public class A2_JackBlergen extends CityWaterflake implements Explorer {
-    int ExplorCost = 100 ;
+    boolean FreeWeaponGave = false ;
+    int WeaponPrice = 5;
+    int ExplorCost = 4000 ;
     boolean Necklace = false;
     A2_JackBlergen(int PlayerMedical, int PlayerWeapon, int PlayerFood,
-                    int PlayerJewelry, int PlayerMen, int PlayerGold){
+                    int PlayerJewelry, int PlayerMen, int PlayerGold , int PlayerAlcohol
+                    ,boolean FreeWeaponGave){
+        
     super(PlayerMedical,PlayerWeapon,PlayerFood,
-            PlayerJewelry,PlayerMen,PlayerGold);
+            PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);
+    this.FreeWeaponGave = FreeWeaponGave ;
     System.out.println("[Person:Jack Blergen]");
-    System.out.println("Jack: What?");
+    System.out.println("Jack: ....");
     Greeting();
     System.out.println("...");
     }
+    
     void Greeting(){
     System.out.println("Jack: What do you want form the old man?");
     System.out.println("(1) Can I ask you something ?"
@@ -23,58 +29,69 @@ public class A2_JackBlergen extends CityWaterflake implements Explorer {
                 case 1 : Asking(); break;
                 case 2 : Drinking(); break;
                 case 3 : Explor(); break;
-                case 4 : System.out.println("People in Waterflake always like to trading things by things.");
+                case 4 : System.out.println("Jack: I still have some unused weapon if you want.");
                 FreeTrade(); break;
                 default : break;
             }
     }
+    
     void Drinking(){
     System.out.println("-DRINKING-");
+    //1 tell Lizz secret 2 tell his real pass 3 tell his secret <<< inw wizard
+    if(ScannerDrinking(PlayerAlcohol)){
+        System.out.println("DRINKING-1");
+        PlayerAlcohol--;
+        if(ScannerDrinking(PlayerAlcohol)){
+            System.out.println("DRINKING-2");
+            PlayerAlcohol--;
+            if(ScannerDrinking(PlayerAlcohol)){
+                System.out.println("DRINKING-3");
+                PlayerAlcohol--;                
+                                }
+                             }
+                        }
     Greeting();
     }
+    
     void Asking(){
-    System.out.println("(1) Tell me about the artifact."
-            + "\n(2) Tell me about Drylagoon."
-            + "\n(3) Tell me about Redapple."
-            + "\n(4) Tell me about yourself."
-            + "\n(5) Let talk about something else.");
-            switch(ScannerSwitch(5)){
-                case 1 : System.out.println(": Waterflake-"); 
+    System.out.println("(1) Tell me about artifacts."
+            + "\n(2) Tell me about the artifact in this river."
+            + "\n(3) Tell me about yourself"
+            + "\n(4) Let talk about something else.");
+            switch(ScannerSwitch(4)){
+                case 1 : System.out.println("artifacts"); 
                          Asking(); break;
-                case 2 : System.out.println("-Drylagoon-"); 
+                case 2 : System.out.println("artifact in this river-"); 
                          Asking(); break;
-                case 3 : System.out.println("-Redapple-");
+                case 3 : System.out.println("Yourself");
                          Asking(); break;
-                case 4 : System.out.println("-Yourself-");
-                         Asking(); break;
-                case 5 : Greeting(); break;
+                case 4 : Greeting(); break;
             }
     }
     public void Explor(){
-        if(ExplorCost>PlayerGold){System.out.println("Look like you don't have enough gold for that young boy.");
+        if(ExplorCost>PlayerGold){System.out.println("Jack: Look like you don't have enough gold for that young boy.");
         Asking();
         }else{
-        System.out.println("Finally someone with the eyes");
+        System.out.println("Jack: Finally someone with the eyes");
         PlayerGold = PlayerGold - ExplorCost ;
         System.out.println("'At night Jack comeback and give you $!!#$!%@% "
-                + "\n and you never see him agian'");
+                + "\n you never see him agian...'");
         Necklace = true ;
         }
     }
     void FreeTrade(){
-    System.out.println("(1) I want to trade Weapon to Food."
-            + "\n(2) I want to trade Jewelry to Food."
-            + "\n(3) Let talk about something else.");
-            switch(ScannerSwitch(3)){
-                case 1 : PlayerTrading("Weapon",4,PlayerWeapon);
-           PlayerWeapon = QuantityTrade("-",PlayerWeapon,Quantity);
-           Show("Weapon",PlayerWeapon);
-           FreeTrade(); break;
-                case 2 : PlayerTrading("Jewelry",10,PlayerJewelry);
-           PlayerJewelry = QuantityTrade("-",PlayerJewelry,Quantity);
-           Show("Jewelry",PlayerJewelry);
-           FreeTrade(); break;
-                case 3 : System.out.println("-GREET2-"); Greeting(); break;
+        ///it is basic trade not really freetrade
+    System.out.println("(1) I want your weapon."
+            + "\n(2) Let talk about something else.");
+            switch(ScannerSwitch(2)){ 
+                case 1 : 
+                if(FreeWeaponGave){
+                System.out.println("I gave you every Weapon I have.");
+                }else{
+                PlayerWeapon = PlayerWeapon  + 10;  
+                FreeWeaponGave = true ;
+                }    
+                case 2 : System.out.println("So, what now ?"); Greeting(); break;
             }
     }
     //Form Waterflake

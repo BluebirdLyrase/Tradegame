@@ -13,9 +13,9 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
     
     int JewelryPrice = 20;
     C1_GabrielSnyder(int PlayerMedical,int PlayerWeapon,int PlayerFood,
-                      int PlayerJewelry,int PlayerMen,int PlayerGold){    
+                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
-          PlayerJewelry,PlayerMen,PlayerGold);    
+          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);    
     System.out.println("[Person:Gabriel Snyder]");
     System.out.println("Gabriel: -GREET-"); 
     Greeting();
@@ -96,7 +96,6 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
                 case 6 : System.out.println("Gabriel: -GREET2-");
                          Greeting(); break;
             }
-            
     }
     //sell cheap jewelry but he buy only jewelry 
     
@@ -129,5 +128,12 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
     GoldSetter("+");
     Show("Gold",PlayerGold);
     }
-    public void Explor(){}
+    public void Explor(){
+    
+    
+        
+        
+    
+    
+    }
 }

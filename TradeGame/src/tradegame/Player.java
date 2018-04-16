@@ -11,6 +11,7 @@ package tradegame;
  */
 public class Player extends Scan {
     
+    private int Alcohol = 5 ;
     private int Medical = 10 ;
     private int Weapon = 10  ;
     private int Food = 10  ;
@@ -21,7 +22,7 @@ public class Player extends Scan {
     private boolean[] Artifact = {false,false,false};
     private boolean ArtifactCheck = Artifact[0]&&Artifact[1]&&Artifact[2];
     private String[] ArtifactName ={"-Waterflake Ancient Necklace","-Soul Magic Knownage","-Dragon's egg"};
-    private String[] ShowInventoryName = {"Gold","Medical","Weapon","Food","Jewelry","Manpower"};
+    private String[] ShowInventoryName = {"Gold","Medical","Weapon","Food","Jewelry","Manpower","Alcohol"};
     boolean[] drunk = {false,false,false,false,false,false,false,false}; 
     //[0] Jack
     //[1] Priscilla
@@ -31,11 +32,13 @@ public class Player extends Scan {
     //[5] 
     //[6] 
     //[7] 
+    private boolean[] SingleTimeEvent = {false};
+    //[0] Jack free Weapon
  
     void ShowInventory(){
         System.out.println("[Supply]");
-        int[] ShowInventoryQuantity = {Gold,Medical,Weapon,Food,Jewelry,Men};
-        for(int i = 0 ; i<=5 ;i++){
+        int[] ShowInventoryQuantity = {Gold,Medical,Weapon,Food,Jewelry,Men,Alcohol};
+        for(int i = 0 ; i<=6 ;i++){
         System.out.println(ShowInventoryName[i]+":"+ShowInventoryQuantity[i]);
         }
         
@@ -47,6 +50,10 @@ public class Player extends Scan {
         i++;
         }
         }
+    }
+    
+    int getAlcohol(){
+    return Alcohol ;
     }
     
 ////////////////////////////////////////////////////////////
@@ -78,13 +85,14 @@ public class Player extends Scan {
     return Gold ;
     }
     //////////////////////////////////////////////////
-    void setPlayerInventory(int Medical,int Weapon,int Food,int Men,int Jewelry,int Gold ){
+    void setPlayerInventory(int Medical,int Weapon,int Food,int Men,int Jewelry,int Gold,int Alcohol ){
     this.Medical = Medical ;
     this.Weapon = Weapon  ;
     this.Food = Food  ;
     this.Men = Men  ;
     this.Jewelry = Jewelry  ;
     this.Gold = Gold ;
+    this.Alcohol =Alcohol ;
     }
     
     char CheckEnding(){
@@ -100,12 +108,23 @@ public class Player extends Scan {
     }
     }
     
-    void SetArtifact(int position){
+    void setArtifact(int position){
     Artifact[position] = true;
     }
     
-    boolean GetArtifact(int position){
+    boolean getArtifact(int position){
     return Artifact[position];
     }
     
+    void setSingleTimeEvent(int position){
+    SingleTimeEvent[position] = true;
+    }
+    
+    boolean getSingleTimeEvent(int position){
+    return SingleTimeEvent[position];
+    }
+    
+    void setDrunk(boolean drinking,int position){
+    if(drinking) drunk[position] = true ;
+    }
 }

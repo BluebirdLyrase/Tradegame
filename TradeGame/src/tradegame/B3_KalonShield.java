@@ -1,20 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package tradegame;
 
-/**
- *
- * @author 6030213005
- */
+package tradegame;
 public class B3_KalonShield extends CityDrylagoon implements Guardian  {
     
     B3_KalonShield (int PlayerMedical,int PlayerWeapon,int PlayerFood,
-                      int PlayerJewelry,int PlayerMen,int PlayerGold){    
+                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
-          PlayerJewelry,PlayerMen,PlayerGold);    
+          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);    
     System.out.println("[Person:Kalon Shield]");
     System.out.println("Kalon: -GREET-"); 
     Greeting();

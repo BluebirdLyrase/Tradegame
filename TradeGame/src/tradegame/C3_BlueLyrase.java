@@ -4,9 +4,9 @@ public class C3_BlueLyrase extends CityRedapple implements Merchant,LaborBroker{
     
     int JewelryPrice = 20;
     C3_BlueLyrase (int PlayerMedical,int PlayerWeapon,int PlayerFood,
-                      int PlayerJewelry,int PlayerMen,int PlayerGold){    
+                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
-          PlayerJewelry,PlayerMen,PlayerGold);    
+          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);    
     System.out.println("[Person:Blue Lyrase]");
     System.out.println("Blue: -GREET-"); 
     Greeting();
@@ -18,13 +18,15 @@ public class C3_BlueLyrase extends CityRedapple implements Merchant,LaborBroker{
             + "\n(2) -DRINKING-"
             + "\n(3) -PROMOTION-"
             + "\n(4) -TRADE-"
-            + "\n(5) I need to go.");
-            switch(ScannerSwitch(5)){
+            + "\n(5) -Blackmarket"
+            + "\n(6) I need to go.");
+            switch(ScannerSwitch(6)){
                 case 1 : Asking(); break;
                 case 2 : Drinking(); break;
                 case 3 : Promotion(); break;
                 case 4 : Trade(); break;
-                case 5 : break;
+                case 5 : Blackmarket(); break;
+                case 6 : break;
             }
     } 
     void Asking(){

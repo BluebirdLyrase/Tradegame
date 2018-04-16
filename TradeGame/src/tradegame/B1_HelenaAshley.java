@@ -12,9 +12,9 @@ package tradegame;
 public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
     
     B1_HelenaAshley(int PlayerMedical,int PlayerWeapon,int PlayerFood,
-                      int PlayerJewelry,int PlayerMen,int PlayerGold){    
+                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
-          PlayerJewelry,PlayerMen,PlayerGold);    
+          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);    
     System.out.println("[Person:Helena Ashley]");
     System.out.println("Helena: -GREET-"); 
     Greeting();

@@ -5,9 +5,9 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
     int FoodPrice = 2;
     int JewelryPrice = 50;
     A1_LizzaRobinhood(int PlayerMedical,int PlayerWeapon,int PlayerFood,
-                      int PlayerJewelry,int PlayerMen,int PlayerGold){    
+                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
-          PlayerJewelry,PlayerMen,PlayerGold);    
+          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);    
     System.out.println("[Person:Lizza Robinhood]");
     System.out.println("Lizza: Welcome to Lizza Good store What can I help you?"); 
     Greeting();
@@ -80,12 +80,12 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
             + "\n(9) Let talk about something else");
     switch(ScannerSwitch(9)){
       /////PLAYER BUYING      
-        case 1 :PlayerBuying("Food",FoodPrice);
+        case 1 :PlayerBuying("Food",this.FoodPrice);
              PlayerFood = QuantitySetter("+",PlayerFood);
              Show("Food",PlayerFood);
              Trade();
     break ;   
-        case 2 :PlayerBuying("Jewelry",JewelryPrice);
+        case 2 :PlayerBuying("Jewelry",this.JewelryPrice);
              PlayerJewelry = QuantitySetter("+",PlayerJewelry);
              Show("Jewelry",PlayerJewelry);
              Trade(); 
@@ -95,28 +95,28 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
              Show("Medical",PlayerMedical);
              Trade(); 
     break ;   
-        case 4 :PlayerBuying("Weapon",WeaponPrice);
+        case 4 :PlayerBuying("Weapon",super.WeaponPrice);
              PlayerWeapon = QuantitySetter("+",PlayerWeapon);
              Show("Weapon",PlayerWeapon);
              Trade();  
     break ;     
     /////PLAYER SELLING 
-        case 5 :PlayerSelling("Food",(FoodPrice/2),PlayerFood);
+        case 5 :PlayerSelling("Food",(this.FoodPrice/2),PlayerFood);
             PlayerFood = QuantitySetter("-",PlayerFood);
             Show("Food",PlayerFood);
             Trade(); 
     break ; 
-        case 6 :PlayerSelling("Jewelry",(JewelryPrice/2),PlayerJewelry);
+        case 6 :PlayerSelling("Jewelry",(this.JewelryPrice/2),PlayerJewelry);
             PlayerJewelry = QuantitySetter("-",PlayerJewelry);
             Show("Jewelry",PlayerJewelry);
             Trade();
     break ; 
-        case 7 :PlayerSelling("Medical",(MedicalPrice/2),PlayerMedical);
+        case 7 :PlayerSelling("Medical",(super.MedicalPrice/2),PlayerMedical);
             PlayerMedical = QuantitySetter("-",PlayerMedical);
             Show("Medical",PlayerMedical);
             Trade();
     break ;   
-        case 8 :PlayerSelling("Weapon",(WeaponPrice/2),PlayerWeapon);
+        case 8 :PlayerSelling("Weapon",(super.WeaponPrice/2),PlayerWeapon);
             PlayerWeapon = QuantitySetter("-",PlayerWeapon);
             Show("Weapon",PlayerWeapon);
             Trade();

@@ -12,9 +12,9 @@ package tradegame;
 public class C2_FoxPocketwatch extends CityRedapple implements Guardian {
     
     C2_FoxPocketwatch(int PlayerMedical,int PlayerWeapon,int PlayerFood,
-                      int PlayerJewelry,int PlayerMen,int PlayerGold){    
+                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
-          PlayerJewelry,PlayerMen,PlayerGold);    
+          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);    
     System.out.println("[Person:Fox Pocketwatch]");
     System.out.println("Fox: -GREET-"); 
     Greeting();
