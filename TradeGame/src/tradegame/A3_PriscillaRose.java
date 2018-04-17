@@ -40,7 +40,16 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
      //player got Nightmare about halfBeastmonster
      }
     void Asking(){
-     
+    System.out.println("(1) -ASKING1-"
+                      +"\n(2) -ASKING2-"
+                      +"\n(3) Let talk about something else.");
+                      switch(ScannerSwitch(3)){
+                          case 1 : System.out.println("Rose: -ASKING1-");
+                                   Asking(); break;
+                          case 2 : System.out.println("Rose: -ASKING2-");
+                                   Asking(); break;
+                          case 3 : Greeting(); break;
+                      }
      }
     void Drinking(){
     System.out.println("-DRINKING-");

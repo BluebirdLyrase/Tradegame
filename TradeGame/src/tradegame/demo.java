@@ -79,10 +79,10 @@ public class demo {
                         System.out.println("'The door is lock'");    
                         }else{
                         
-                        B1_HelenaAshley Helen = new B1_HelenaAshley(player.getFood(),player.getJewelry(),player.getWeapon(),player.getMedical(),
+                        B1_HelenaAshley Helen = new B1_HelenaAshley(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
                                                                         player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[2],player.getMagic(0));
-                        player.setPlayerInventory(Helen.PlayerFood,Helen.PlayerJewelry,Helen.PlayerWeapon,
-                                        Helen.PlayerMedical,Helen.PlayerMen,Helen.PlayerGold,Helen.PlayerAlcohol);
+                        player.setPlayerInventory(Helen.PlayerMedical,Helen.PlayerWeapon,Helen.PlayerFood,
+                                        Helen.PlayerJewelry,Helen.PlayerMen,Helen.PlayerGold,Helen.PlayerAlcohol);
                         player.setArtifact(1,Helen.Knowledge);
                         player.setDrunk(Helen.drinking,2);
                         player.setMagic(Helen.PlayerMagic[0],0);
@@ -91,20 +91,20 @@ public class demo {
                         Drylagoon();
                         break;
                     ////////////////////////////////////////////////////////////////////////////////////////////////////
-                    case 2 : B2_MickerGorn Mick = new B2_MickerGorn(player.getFood(),player.getJewelry(),player.getWeapon(),player.getMedical(),
+                    case 2 : B2_MickerGorn Mick = new B2_MickerGorn(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
                                                                     player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[3],player.getMagic(0),player.getMagic(1));
-                        player.setPlayerInventory(Mick.PlayerFood,Mick.PlayerJewelry,Mick.PlayerWeapon,
-                                                  Mick.PlayerMedical,Mick.PlayerMen,Mick.PlayerGold,Mick.PlayerAlcohol);
+                        player.setPlayerInventory(Mick.PlayerMedical,Mick.PlayerWeapon,Mick.PlayerFood,
+                                                  Mick.PlayerJewelry,Mick.PlayerMen,Mick.PlayerGold,Mick.PlayerAlcohol);
                         player.ShowInventory();
                         player.setDrunk(Mick.drinking,3);
                         player.setMagic(Mick.PlayerMagic[1],1);
                         Drylagoon();
                         break;
                     ////////////////////////////////////////////////////////////////////////////////////////////////////
-                    case 3 : B3_KalonShield Kalon = new B3_KalonShield(player.getFood(),player.getJewelry(),player.getWeapon(),
-                                                                       player.getMedical(),player.getMen(),player.getGold(),player.getAlcohol());
-                        player.setPlayerInventory(Kalon.PlayerFood,Kalon.PlayerJewelry,Kalon.PlayerWeapon,
-                                                  Kalon.PlayerMedical,Kalon.PlayerMen,Kalon.PlayerGold,Kalon.PlayerAlcohol);
+                    case 3 : B3_KalonShield Kalon = new B3_KalonShield(player.getMedical(),player.getWeapon(),player.getFood(),
+                                                                       player.getJewelry(),player.getMen(),player.getGold(),player.getAlcohol());
+                        player.setPlayerInventory(Kalon.PlayerMedical,Kalon.PlayerWeapon,Kalon.PlayerFood,
+                                                  Kalon.PlayerJewelry,Kalon.PlayerMen,Kalon.PlayerGold,Kalon.PlayerAlcohol);
                         player.ShowInventory();
                         Drylagoon();
                         break;
@@ -115,27 +115,27 @@ public class demo {
         public static void Redapple(){
                 
                 switch(player.ScannerSwitch(4)){
-                    case 1 : C1_GabrielSnyder Gabriel = new C1_GabrielSnyder(player.getFood(),player.getJewelry(),player.getWeapon(),player.getMedical(),
+                    case 1 : C1_GabrielSnyder Gabriel = new C1_GabrielSnyder(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
                                                                              player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[4],player.getMagic(1));
-                    player.setPlayerInventory(Gabriel.PlayerFood,Gabriel.PlayerJewelry,Gabriel.PlayerWeapon,
-                                              Gabriel.PlayerMedical,Gabriel.PlayerMen,Gabriel.PlayerGold,Gabriel.PlayerAlcohol);
+                    player.setPlayerInventory(Gabriel.PlayerMedical,Gabriel.PlayerWeapon,Gabriel.PlayerFood,
+                                              Gabriel.PlayerJewelry,Gabriel.PlayerMen,Gabriel.PlayerGold,Gabriel.PlayerAlcohol);
                     player.setDrunk(Gabriel.drinking,4);
                     player.ShowInventory();
                     Redapple();
                     break;
                 ////////////////////////////////////////////////////////////////////////////////////////////////////
-                case 2 : C2_FoxPocketwatch Fox = new C2_FoxPocketwatch(player.getFood(),player.getJewelry(),player.getWeapon(),
-                                                                           player.getMedical(),player.getMen(),player.getGold(),player.getAlcohol());
-                    player.setPlayerInventory(Fox.PlayerFood,Fox.PlayerJewelry,Fox.PlayerWeapon,
-                                              Fox.PlayerMedical,Fox.PlayerMen,Fox.PlayerGold,Fox.PlayerAlcohol);
+                case 2 : C2_FoxPocketwatch Fox = new C2_FoxPocketwatch(player.getMedical(),player.getWeapon(),player.getFood(),
+                                                                           player.getJewelry(),player.getMen(),player.getGold(),player.getAlcohol());
+                    player.setPlayerInventory(Fox.PlayerMedical,Fox.PlayerWeapon,Fox.PlayerFood,
+                                              Fox.PlayerJewelry,Fox.PlayerMen,Fox.PlayerGold,Fox.PlayerAlcohol);
                     player.ShowInventory();
                     Redapple();
                     break;
                 ////////////////////////////////////////////////////////////////////////////////////////////////////
-                case 3 : C3_BlueLyrase Blue = new C3_BlueLyrase(player.getFood(),player.getJewelry(),player.getWeapon(),player.getMedical(),
+                case 3 : C3_BlueLyrase Blue = new C3_BlueLyrase(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
                                                                 player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[5]);
-                    player.setPlayerInventory(Blue.PlayerFood,Blue.PlayerJewelry,Blue.PlayerWeapon,
-                                              Blue.PlayerMedical,Blue.PlayerMen,Blue.PlayerGold,Blue.PlayerAlcohol);
+                    player.setPlayerInventory(Blue.PlayerMedical,Blue.PlayerWeapon,Blue.PlayerFood,
+                                              Blue.PlayerJewelry,Blue.PlayerMen,Blue.PlayerGold,Blue.PlayerAlcohol);
                     player.setDrunk(Blue.drinking,5);
                     player.ShowInventory();
                     Redapple();
