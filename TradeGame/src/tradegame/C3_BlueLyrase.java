@@ -66,9 +66,33 @@ boolean report;
     Greeting();
     }
     void Promotion(){
-    //BlackMarjet
-    report = true;
+    System.out.println("[Your Gold : "+PlayerGold+" ]");    
+    System.out.println("(1) I want to buy some food(1/"+FoodPrice+"gold)"
+            + "\n(2) I want to buy some jewelry(1/"+JewelryPrice+"gold)"
+            + "\n(3) I want to buy some medical supply(1/"+MedicalPrice+"gold)"   
+            + "\n(4) I want to buy some weapon supply(1/"+WeaponPrice+"gold)"
+            + "\n(5) Let talk about something else.");
+            switch(ScannerSwitch(5)){
+                case 1 : PlayerBuying("Food",5);
+                         PlayerFood = QuantitySetter("+",PlayerFood);
+                         Show("Food",PlayerFood);
+                         Promotion(); break;
+                case 2 : PlayerBuying("Jewelry",10);
+                         PlayerJewelry = QuantitySetter("+",PlayerJewelry);
+                         Show("Jewelry",PlayerJewelry);
+                         Promotion(); break;
+                case 3 : PlayerBuying("Medical",5);
+                         PlayerMedical = QuantitySetter("+",PlayerMedical);
+                         Show("Medical",PlayerMedical);
+                         Promotion(); break;
+                case 4 : PlayerBuying("Weapon",5);
+                         PlayerWeapon = QuantitySetter("+",PlayerWeapon);
+                         Show("Weapon",PlayerWeapon);
+                         Promotion(); break;
+                case 5 : Greeting(); break;
     }  
+    report = true;
+    }
     public void Trade(){
     System.out.println("[Your Gold : "+PlayerGold+" ]");    
     System.out.println("(1) I want to buy some food(1/"+FoodPrice+"gold)"

@@ -72,8 +72,8 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
     }
     void  Promotion(){
     System.out.println("You can buy 10 medical with a half price(10/50 gold)"
-            + "(1) I want to buy some medical."
-            + "(2) Let talk about something else.");
+            + "\n(1) I want to buy some medical."
+            + "\n(2) Let talk about something else.");
             switch(ScannerSwitch(2)){
                 case 1 :
                         PlayerPromotion("Medical",super.MedicalPrice,"Gabriel");
