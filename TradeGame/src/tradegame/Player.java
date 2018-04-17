@@ -11,17 +11,16 @@ package tradegame;
  */
 public class Player extends Scan {
     
-    private int Alcohol = 5 ;
-    private int Medical = 10 ;
-    private int Weapon = 10  ;
-    private int Food = 10  ;
-    private int Men = 10  ;
-    private int Jewelry = 10  ;
-    private int Days = 0  ;
-    private int Gold = 10000 ;
+    private int Alcohol = 7000 ;
+    private int Medical = 1000 ;
+    private int Weapon = 2000  ;
+    private int Food = 3000  ;
+    private int Men = 5000;
+    private int Jewelry = 4000  ;
+    private int Gold = 6000 ;
     private boolean[] Artifact = {false,false,false};
     private boolean ArtifactCheck = Artifact[0]&&Artifact[1]&&Artifact[2];
-    private String[] ArtifactName ={"-Waterflake Ancient Necklace","-Soul Magic Knownage","-Dragon's egg"};
+    private String[] ArtifactName ={"-Waterflake Ancient Necklace","-Secret Magic Knowledge","-Dragon's egg"};
     private String[] ShowInventoryName = {"Gold","Medical","Weapon","Food","Jewelry","Manpower","Alcohol"};
     boolean[] drunk = {false,false,false,false,false,false,}; 
     //[0] Jack
@@ -30,8 +29,9 @@ public class Player extends Scan {
     //[3] Micker
     //[4] Gabriel
     //[5] Blue
-    private boolean[] SingleTimeEvent = {false};
+    private boolean[] SingleTimeEvent = {false,false};
     //[0] Jack free Weapon
+    //[1] Helena Grim
     private boolean[] Magic = {false,false};
     //[0]Helena
     //[1] Micker
@@ -77,9 +77,6 @@ public class Player extends Scan {
     return Jewelry;
     }
  ///////////////////////////////////////////////////////////      
-    int getDays(){////
-    return Days ;
-    }
  ///////////////////////////////////////////////////////////      
     int getGold(){
     return Gold ;
@@ -108,8 +105,8 @@ public class Player extends Scan {
     }
     }
     
-    void setArtifact(int position){
-    Artifact[position] = true;
+    void setArtifact(int position,boolean check){
+    if(check)Artifact[position] = true;
     }
     
     boolean getArtifact(int position){

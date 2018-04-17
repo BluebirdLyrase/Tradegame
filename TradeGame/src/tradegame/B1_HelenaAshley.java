@@ -5,7 +5,7 @@
  */
 package tradegame;
 public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
-    
+    boolean Knowledge ;
     B1_HelenaAshley(int PlayerMedical,int PlayerWeapon,int PlayerFood,
                       int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol
                         ,boolean drinking,boolean PlayerMagic0){    
@@ -25,14 +25,12 @@ public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
     System.out.println("(1) -ASKING-"
             + "\n(2) -DRINKING-"
             + "\n(3) -MAGIC TEACH-"
-            + "\n(4) -EXPLOR-"
-            + "\n(5) I need to go.");
-            switch(ScannerSwitch(5)){
+            + "\n(4) I need to go.");
+            switch(ScannerSwitch(4)){
                 case 1 : Asking(); break;
                 case 2 : Drinking(); break;
                 case 3 : MagicTeach(); break;
-                case 4 : Explor(); break;
-                case 5 : break;
+                case 4 : break;
     }
     } 
     void Asking(){
@@ -65,6 +63,7 @@ public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
                 System.out.println("-DRINKING3-");
                 PlayerAlcohol--;
                 this.drinking = true ;
+                Explor();
             }
     }
     Greeting();
@@ -76,5 +75,26 @@ public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
     }
     Greeting();
     }
-    public void Explor(){}
+    public void Explor(){
+        
+        System.out.println("(1)I will help you find that grimoire."
+                         + "\n not my problem.         ");
+        
+    switch(ScannerSwitch(2)){
+        case 1 : FindingGrimoire(); break ;
+        case 2 : System.out.println("Helena : Sorry to bother you.");
+    }
+    }
+    void FindingGrimoire(){
+        if(PlayerMen>=25){
+        System.out.println("'You found grimoire'"); 
+        LearningSecretMagic();
+        }else{ 
+        System.out.println("Error 404 not found");
+        }
+    }
+    void LearningSecretMagic(){
+        if(PlayerMagic[0])Knowledge = true ;
+    }
+    
 }

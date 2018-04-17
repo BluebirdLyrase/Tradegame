@@ -7,12 +7,13 @@ public class demo {
         
         System.out.println("Story blaqqq");
         Waterflake();
-        System.out.println(player.drunk[0]+""+""+player.drunk[1]);
+        System.out.println("drunk:"+player.drunk[0]+""+""+player.drunk[1]);
         Drylagoon();
-        System.out.println(player.drunk[2]+""+""+player.drunk[3]);
-        System.out.println(player.getMagic(0)+""+""+player.getMagic(1));
+        System.out.println("drunk:"+player.drunk[2]+""+""+player.drunk[3]);
+        System.out.println("Magic:"+player.getMagic(0)+""+""+player.getMagic(1));
         //Redapple();
         //player.Ending(player.CheckEnding());
+        System.out.println("A:"+player.getArtifact(0)+""+""+player.getArtifact(1));
     }
     
         public static void Waterflake(){
@@ -43,7 +44,7 @@ public class demo {
                                                                       ,player.getSingleTimeEvent(0),player.drunk[0]);
                         player.setPlayerInventory(Jack.PlayerMedical,Jack.PlayerWeapon,Jack.PlayerFood,Jack.PlayerJewelry,
                                                     Jack.PlayerMen,Jack.PlayerGold,Jack.PlayerAlcohol);
-                        player.setArtifact(0);
+                        player.setArtifact(0,Jack.Necklace);
                         player.setSingleTimeEvent(0);
                         player.setDrunk(Jack.drinking,0);
                         player.ShowInventory();
@@ -72,13 +73,21 @@ public class demo {
         public static void Drylagoon(){
                 
                 switch(player.ScannerSwitch(4)){
-                    case 1 : B1_HelenaAshley Helen = new B1_HelenaAshley(player.getFood(),player.getJewelry(),player.getWeapon(),player.getMedical(),
+
+                    case 1 :                        
+                        if(player.getArtifact(1)){
+                        System.out.println("'The door is lock'");    
+                        }else{
+                        
+                        B1_HelenaAshley Helen = new B1_HelenaAshley(player.getFood(),player.getJewelry(),player.getWeapon(),player.getMedical(),
                                                                         player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[2],player.getMagic(0));
                         player.setPlayerInventory(Helen.PlayerFood,Helen.PlayerJewelry,Helen.PlayerWeapon,
                                         Helen.PlayerMedical,Helen.PlayerMen,Helen.PlayerGold,Helen.PlayerAlcohol);
-                        player.ShowInventory();
+                        player.setArtifact(1,Helen.Knowledge);
                         player.setDrunk(Helen.drinking,2);
                         player.setMagic(Helen.PlayerMagic[0],0);
+                        player.ShowInventory();
+                                }
                         Drylagoon();
                         break;
                     ////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -44,7 +44,7 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
             + "\nThere is rumour that some artifacts buried under the Waterflake river await to be discovered"); 
     Asking();
     break ;
-    case 2 : System.out.println("Drylagoon");
+    case 2 : System.out.println("Lizza : I dont know much about Drylagoon but I have heard that everyone in Drylagoon can cast a spell ");
     Asking();
     break ;
     case 3 : System.out.println("Lizza: If you ask me where is the largest and most beautiful village I ever visited."
