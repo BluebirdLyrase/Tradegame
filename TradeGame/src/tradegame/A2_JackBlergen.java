@@ -7,10 +7,11 @@ public class A2_JackBlergen extends CityWaterflake implements Explorer {
     boolean Necklace = false;
     A2_JackBlergen(int PlayerMedical, int PlayerWeapon, int PlayerFood,
                     int PlayerJewelry, int PlayerMen, int PlayerGold , int PlayerAlcohol
-                    ,boolean FreeWeaponGave){
+                    ,boolean FreeWeaponGave,boolean drinking){
         
     super(PlayerMedical,PlayerWeapon,PlayerFood,
             PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);
+    this.drinking = drinking;
     this.FreeWeaponGave = FreeWeaponGave ;
     System.out.println("[Person:Jack Blergen]");
     System.out.println("Jack: ....");
@@ -46,7 +47,8 @@ public class A2_JackBlergen extends CityWaterflake implements Explorer {
             PlayerAlcohol--;
             if(ScannerDrinking(PlayerAlcohol)){
                 System.out.println("DRINKING-3");
-                PlayerAlcohol--;                
+                PlayerAlcohol--;
+                this.drinking = true ;
                                 }
                              }
                         }

@@ -23,18 +23,18 @@ public class Player extends Scan {
     private boolean ArtifactCheck = Artifact[0]&&Artifact[1]&&Artifact[2];
     private String[] ArtifactName ={"-Waterflake Ancient Necklace","-Soul Magic Knownage","-Dragon's egg"};
     private String[] ShowInventoryName = {"Gold","Medical","Weapon","Food","Jewelry","Manpower","Alcohol"};
-    boolean[] drunk = {false,false,false,false,false,false,false,false}; 
+    boolean[] drunk = {false,false,false,false,false,false,}; 
     //[0] Jack
-    //[1] Priscilla
-    //[2] 
-    //[3] 
-    //[4] 
-    //[5] 
-    //[6] 
-    //[7] 
+    //[1] Priscilla Rose
+    //[2] Helena
+    //[3] Micker
+    //[4] Gabriel
+    //[5] Blue
     private boolean[] SingleTimeEvent = {false};
     //[0] Jack free Weapon
- 
+    private boolean[] Magic = {false,false};
+    //[0]Helena
+    //[1] Micker
     void ShowInventory(){
         System.out.println("[Supply]");
         int[] ShowInventoryQuantity = {Gold,Medical,Weapon,Food,Jewelry,Men,Alcohol};
@@ -125,6 +125,14 @@ public class Player extends Scan {
     }
     
     void setDrunk(boolean drinking,int position){
-    if(drinking) drunk[position] = true ;
+    drunk[position] = drinking ;
+    }
+    
+    void setMagic(boolean Magic,int position){
+    this.Magic[position] = Magic ;
+    }
+            
+    boolean getMagic(int position){
+    return Magic[position];
     }
 }

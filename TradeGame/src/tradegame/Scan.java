@@ -37,7 +37,7 @@ public class Scan {
     char sc =  Sc2.nextLine().charAt(0);
     switch(sc){
         case 'Y' : case 'y' : 
-            System.out.println("Now you have "+PlayerAlcohol+" moonshine");
+            System.out.println("Now you have "+(PlayerAlcohol-1)+" moonshine");
             return true ;
         default :    return  false ;
     }

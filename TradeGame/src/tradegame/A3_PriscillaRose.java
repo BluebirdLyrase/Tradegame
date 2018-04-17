@@ -1,11 +1,11 @@
 
 package tradegame;
 public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
-    A3_PriscillaRose(int PlayerMedical,int PlayerWeapon,int PlayerFood,
-                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
+    A3_PriscillaRose(int PlayerMedical,int PlayerWeapon,int PlayerFood,int PlayerJewelry
+                            ,int PlayerMen,int PlayerGold,int PlayerAlcohol,boolean drinking){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
           PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);   
-    
+    this.drinking = drinking ;
     System.out.println("[Npc:Priscilla Rose]"); ///////this constructor will have been called 3rd 
     System.out.println("Rose: Welcome to Heartwarming inn."); 
     Greeting();
@@ -54,6 +54,7 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
                 if(ScannerDrinking(PlayerAlcohol)){
                 System.out.println("-DRINKING3");
                 PlayerAlcohol--;
+                this.drinking = true ;
                     }
             }
     }

@@ -4,13 +4,8 @@
  * and open the template in the editor.
  */
 package tradegame;
-
-/**
- *
- * @author 6030213005
- */
 abstract class CityDrylagoon extends City {
-    
+    boolean[] PlayerMagic = {false,false};
  CityDrylagoon (int PlayerMedical,int PlayerWeapon,int PlayerFood,
                 int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){
     this.PlayerMedical = PlayerMedical ;

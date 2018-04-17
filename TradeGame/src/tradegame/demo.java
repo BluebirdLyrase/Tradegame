@@ -7,12 +7,21 @@ public class demo {
         
         System.out.println("Story blaqqq");
         Waterflake();
+        System.out.println(player.drunk[0]+""+""+player.drunk[1]);
         Drylagoon();
-        Redapple();
-        player.Ending(player.CheckEnding());
+        System.out.println(player.drunk[2]+""+""+player.drunk[3]);
+        System.out.println(player.getMagic(0)+""+""+player.getMagic(1));
+        //Redapple();
+        //player.Ending(player.CheckEnding());
     }
     
         public static void Waterflake(){
+            
+                System.out.println("Choose Where to go"
+                        + "\n(1)Lizza Good store"
+                        + "\n(2)Waterfalke river"
+                        + "\n(3)Heartwarming inn"
+                        + "\n(4)Travel to Drylagoon");
             
                 switch(player.ScannerSwitch(4)){
                     case 1 : System.out.println(">>>Entering Lizza Good store<<<");
@@ -31,9 +40,9 @@ public class demo {
                         }else{
                         A2_JackBlergen Jack = new A2_JackBlergen(player.getMedical(),player.getWeapon(),player.getFood(),
                                                                       player.getJewelry(),player.getMen(),player.getGold(),player.getAlcohol()
-                                                                      ,player.getSingleTimeEvent(0));
-                        player.setPlayerInventory(Jack.PlayerMedical,Jack.PlayerWeapon,Jack.PlayerFood,
-                                                  Jack.PlayerJewelry,Jack.PlayerMen,Jack.PlayerGold,Jack.PlayerAlcohol);
+                                                                      ,player.getSingleTimeEvent(0),player.drunk[0]);
+                        player.setPlayerInventory(Jack.PlayerMedical,Jack.PlayerWeapon,Jack.PlayerFood,Jack.PlayerJewelry,
+                                                    Jack.PlayerMen,Jack.PlayerGold,Jack.PlayerAlcohol);
                         player.setArtifact(0);
                         player.setSingleTimeEvent(0);
                         player.setDrunk(Jack.drinking,0);
@@ -44,11 +53,12 @@ public class demo {
                     ////////////////////////////////////////////////////////////////////////////////////////////////////       
                     case 3 :
                         System.out.println(">>>Entering Heartwarming inn<<<");
-                        A3_PriscillaRose Rose = new A3_PriscillaRose(player.getMedical(),player.getWeapon(),player.getFood(),
-                                                                       player.getJewelry(),player.getMen(),player.getGold(),player.getAlcohol());
+                        A3_PriscillaRose Rose = new A3_PriscillaRose(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
+                                                                        player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[1]);
                         player.setPlayerInventory(Rose.PlayerMedical,Rose.PlayerWeapon,Rose.PlayerFood,
                                                   Rose.PlayerJewelry,Rose.PlayerMen,Rose.PlayerGold,Rose.PlayerAlcohol);
                         player.ShowInventory();
+                        player.setDrunk(Rose.drinking,1);
                         Waterflake();
                         break;
                     ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -62,19 +72,23 @@ public class demo {
         public static void Drylagoon(){
                 
                 switch(player.ScannerSwitch(4)){
-                    case 1 : B1_HelenaAshley Helen = new B1_HelenaAshley(player.getFood(),player.getJewelry(),player.getWeapon(),
-                                                                         player.getMedical(),player.getMen(),player.getGold(),player.getAlcohol());
+                    case 1 : B1_HelenaAshley Helen = new B1_HelenaAshley(player.getFood(),player.getJewelry(),player.getWeapon(),player.getMedical(),
+                                                                        player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[2],player.getMagic(0));
                         player.setPlayerInventory(Helen.PlayerFood,Helen.PlayerJewelry,Helen.PlayerWeapon,
                                         Helen.PlayerMedical,Helen.PlayerMen,Helen.PlayerGold,Helen.PlayerAlcohol);
                         player.ShowInventory();
+                        player.setDrunk(Helen.drinking,2);
+                        player.setMagic(Helen.PlayerMagic[0],0);
                         Drylagoon();
                         break;
                     ////////////////////////////////////////////////////////////////////////////////////////////////////
-                    case 2 : B2_MickerGorn Mick = new B2_MickerGorn(player.getFood(),player.getJewelry(),player.getWeapon(),
-                                                                    player.getMedical(),player.getMen(),player.getGold(),player.getAlcohol());
+                    case 2 : B2_MickerGorn Mick = new B2_MickerGorn(player.getFood(),player.getJewelry(),player.getWeapon(),player.getMedical(),
+                                                                    player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[3],player.getMagic(0),player.getMagic(1));
                         player.setPlayerInventory(Mick.PlayerFood,Mick.PlayerJewelry,Mick.PlayerWeapon,
                                                   Mick.PlayerMedical,Mick.PlayerMen,Mick.PlayerGold,Mick.PlayerAlcohol);
                         player.ShowInventory();
+                        player.setDrunk(Mick.drinking,3);
+                        player.setMagic(Mick.PlayerMagic[1],1);
                         Drylagoon();
                         break;
                     ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -92,10 +106,11 @@ public class demo {
         public static void Redapple(){
                 
                 switch(player.ScannerSwitch(4)){
-                    case 1 : C1_GabrielSnyder Gabriel = new C1_GabrielSnyder(player.getFood(),player.getJewelry(),player.getWeapon(),
-                                                                             player.getMedical(),player.getMen(),player.getGold(),player.getAlcohol());
+                    case 1 : C1_GabrielSnyder Gabriel = new C1_GabrielSnyder(player.getFood(),player.getJewelry(),player.getWeapon(),player.getMedical(),
+                                                                             player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[4],player.getMagic(1));
                     player.setPlayerInventory(Gabriel.PlayerFood,Gabriel.PlayerJewelry,Gabriel.PlayerWeapon,
                                               Gabriel.PlayerMedical,Gabriel.PlayerMen,Gabriel.PlayerGold,Gabriel.PlayerAlcohol);
+                    player.setDrunk(Gabriel.drinking,4);
                     player.ShowInventory();
                     Redapple();
                     break;
@@ -108,10 +123,11 @@ public class demo {
                     Redapple();
                     break;
                 ////////////////////////////////////////////////////////////////////////////////////////////////////
-                case 3 : C3_BlueLyrase Blue = new C3_BlueLyrase(player.getFood(),player.getJewelry(),player.getWeapon(),
-                                                                player.getMedical(),player.getMen(),player.getGold(),player.getAlcohol());
+                case 3 : C3_BlueLyrase Blue = new C3_BlueLyrase(player.getFood(),player.getJewelry(),player.getWeapon(),player.getMedical(),
+                                                                player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[5]);
                     player.setPlayerInventory(Blue.PlayerFood,Blue.PlayerJewelry,Blue.PlayerWeapon,
                                               Blue.PlayerMedical,Blue.PlayerMen,Blue.PlayerGold,Blue.PlayerAlcohol);
+                    player.setDrunk(Blue.drinking,5);
                     player.ShowInventory();
                     Redapple();
                     break;

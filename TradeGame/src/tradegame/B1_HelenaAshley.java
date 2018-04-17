@@ -4,17 +4,15 @@
  * and open the template in the editor.
  */
 package tradegame;
-
-/**
- *
- * @author 6030213005
- */
 public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
     
     B1_HelenaAshley(int PlayerMedical,int PlayerWeapon,int PlayerFood,
-                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
+                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol
+                        ,boolean drinking,boolean PlayerMagic0){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
-          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);    
+          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);
+    this.drinking = drinking;
+    this.PlayerMagic[0] = PlayerMagic0;
     System.out.println("[Person:Helena Ashley]");
     System.out.println("Helena: -GREET-"); 
     Greeting();
@@ -66,10 +64,17 @@ public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
             if(ScannerDrinking(PlayerAlcohol)){
                 System.out.println("-DRINKING3-");
                 PlayerAlcohol--;
+                this.drinking = true ;
             }
     }
     Greeting();
     }
-    void  MagicTeach(){}
+    void  MagicTeach(){
+    if(PlayerMagic[0]){System.out.println("learn lewl");
+    }else{
+    PlayerMagic[0] = true ;
+    }
+    Greeting();
+    }
     public void Explor(){}
 }

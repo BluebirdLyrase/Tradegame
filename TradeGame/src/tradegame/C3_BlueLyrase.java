@@ -3,10 +3,11 @@ package tradegame;
 public class C3_BlueLyrase extends CityRedapple implements Merchant,LaborBroker{
     
     int JewelryPrice = 20;
-    C3_BlueLyrase (int PlayerMedical,int PlayerWeapon,int PlayerFood,
-                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
+    C3_BlueLyrase (int PlayerMedical,int PlayerWeapon,int PlayerFood,int PlayerJewelry,
+                    int PlayerMen,int PlayerGold,int PlayerAlcohol,boolean drinking){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
-          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);    
+          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);
+    this.drinking=drinking;
     System.out.println("[Person:Blue Lyrase]");
     System.out.println("Blue: -GREET-"); 
     Greeting();
@@ -58,6 +59,7 @@ public class C3_BlueLyrase extends CityRedapple implements Merchant,LaborBroker{
             if(ScannerDrinking(PlayerAlcohol)){
                 System.out.println("-DRINKING3-");
                 PlayerAlcohol--;
+                this.drinking = true ;
             }
         }
     }

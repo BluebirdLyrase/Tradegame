@@ -10,12 +10,16 @@ package tradegame;
  * @author 6030213005
  */
 public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer {
-    
+    boolean MagicRequirtoExplor ;
     int JewelryPrice = 20;
     C1_GabrielSnyder(int PlayerMedical,int PlayerWeapon,int PlayerFood,
-                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
+                      int PlayerJewelry,int PlayerMen,int PlayerGold,
+                      int PlayerAlcohol,boolean drinking,boolean PlayerMagic1){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
-          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);    
+          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);  
+    MagicRequirtoExplor = PlayerMagic1;
+    this.drinking = drinking;
+    MagicRequirtoExplor = PlayerMagic1;
     System.out.println("[Person:Gabriel Snyder]");
     System.out.println("Gabriel: -GREET-"); 
     Greeting();
@@ -65,6 +69,7 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
             if(ScannerDrinking(PlayerAlcohol)){
                 System.out.println("-DRINKING3-");
                 PlayerAlcohol--;
+                this.drinking = true ;
             }
         }
     }
