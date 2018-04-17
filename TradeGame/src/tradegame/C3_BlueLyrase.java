@@ -49,6 +49,18 @@ public class C3_BlueLyrase extends CityRedapple implements Merchant,LaborBroker{
     }
     void Drinking(){
     System.out.println("-DRINKING-");
+    if(ScannerDrinking(PlayerAlcohol)){
+        System.out.println("-DRINKING1-");
+        PlayerAlcohol--;
+        if(ScannerDrinking(PlayerAlcohol)){
+            System.out.println("-DRINKING2-");
+            PlayerAlcohol--;
+            if(ScannerDrinking(PlayerAlcohol)){
+                System.out.println("-DRINKING3-");
+                PlayerAlcohol--;
+            }
+        }
+    }
     Greeting();
     }
     void Promotion(){}  

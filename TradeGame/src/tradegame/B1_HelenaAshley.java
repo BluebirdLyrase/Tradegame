@@ -57,6 +57,17 @@ public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
     }
     void Drinking(){
     System.out.println("-DRINKING-");
+    if(ScannerDrinking(PlayerAlcohol)){
+        System.out.println("-DRINKING1-");
+        PlayerAlcohol--;
+        if(ScannerDrinking(PlayerAlcohol));
+            System.out.println("-DRINKING2-");
+            PlayerAlcohol--;
+            if(ScannerDrinking(PlayerAlcohol)){
+                System.out.println("-DRINKING3-");
+                PlayerAlcohol--;
+            }
+    }
     Greeting();
     }
     void  MagicTeach(){}

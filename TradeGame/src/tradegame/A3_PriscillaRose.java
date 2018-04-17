@@ -7,13 +7,13 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
           PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);   
     
     System.out.println("[Npc:Priscilla Rose]"); ///////this constructor will have been called 3rd 
-    System.out.println("Rose: Welcome to Heartwarming inn"); 
+    System.out.println("Rose: Welcome to Heartwarming inn."); 
     Greeting();
     System.out.println("Rose: See you soon.");
     }
     
     
-     void Greeting(){
+    void Greeting(){
             System.out.println("(1) Can I ask you something ?"
             + "\n(2) How about a drink ?"
             + "\n(3) I want a room to rest"
@@ -36,23 +36,37 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
      
      }
      
-     void Sleeping(){
+    void Sleeping(){
      //player got Nightmare about halfBeastmonster
      }
-     void Asking(){
+    void Asking(){
      
      }
-     void Drinking(){
-     // 1 she tell that Jack already death
-     //Nightmare about halfBeastmonster
+    void Drinking(){
+    System.out.println("-DRINKING-");
+    // 1 she tell that Jack already death
+    if(ScannerDrinking(PlayerAlcohol)){
+        System.out.println("-DRINKING1-");
+        PlayerAlcohol--;
+        if(ScannerDrinking(PlayerAlcohol)){
+            System.out.println("-DRINKING2-");
+            PlayerAlcohol--;
+                if(ScannerDrinking(PlayerAlcohol)){
+                System.out.println("-DRINKING3");
+                PlayerAlcohol--;
+                    }
+            }
+    }
+    Greeting();
+    //Nightmare about halfBeastmonster
      }
-     public void HireMan(){   
+    public void HireMan(){   
     System.out.println("1 men for "+Manprice+" gold");          
     System.out.println("Rose: How many men do you want to hire?");    
     do{   
     System.out.println("Men Quantity>>>");
     Quantity=ScannerTrade(); //for Scan amount of goods player want to Buy
-    if(Quantity==0)System.out.println("Rose: Look like you dont want to hire men around here."); //if player type 0 amount of goods 
+    if(Quantity==0)System.out.println("Rose: Look like you don't want to hire men around here."); //if player type 0 amount of goods 
     TotalPrice = Quantity*Manprice; // to set amount of player's gold that will be use in GoldSetter(-)
     if(TotalPrice>PlayerGold){//Happening when player type more amount of Good then he can afford it 
     System.out.println("Rose: Sorry, that is not enough gold to hire "+Quantity+" amount of men. "
@@ -84,8 +98,19 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
     PlayerAlcohol = QuantitySetter("+",PlayerAlcohol); 
     Show("Moonshine",PlayerAlcohol); 
      }
-     void FreeTrade(){
-     //Alcohol to food 
+    void FreeTrade(){
+         
+    System.out.println("(1) I want to trade Moonshine to Food(1/10),[You have: "+PlayerAlcohol+" Alcohol]"
+                       +"\n(2) Let talk about something else.");
+    switch(ScannerSwitch(2)){
+        case 1 : PlayerTrading("Alcohol",10,PlayerAlcohol);
+                 PlayerAlcohol = QuantityTrade("-",PlayerAlcohol,Quantity);
+                 Show("Alcohol",PlayerAlcohol);
+                 FreeTrade(); break;
+        case 2 : System.out.println("What can I help you ?");
+                 Greeting(); break;
+    }
+     //Alcohol to food
      //   1 ----->  10 food
      }
 }

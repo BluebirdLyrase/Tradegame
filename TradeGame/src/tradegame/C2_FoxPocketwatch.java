@@ -54,7 +54,7 @@ public class C2_FoxPocketwatch extends CityRedapple implements Guardian {
             }
     }
     void Drinking(){
-    System.out.println("-DRINKING-");
+    System.out.println("-NOT DRINKING-");
     Greeting();
     }
     void Promotion(){}    

@@ -45,7 +45,7 @@ public class B3_KalonShield extends CityDrylagoon implements Guardian  {
             }
     }
     void Drinking(){
-    System.out.println("-DRINKING-");
+    System.out.println("-NOT DRINKING-");
     Greeting();
     }
     void MagicTeach(){}

@@ -56,6 +56,18 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
     }
     void Drinking(){
     System.out.println("-DRINKING");
+    if(ScannerDrinking(PlayerAlcohol)){
+        System.out.println("-DRINKING1-");
+        PlayerAlcohol--;
+        if(ScannerDrinking(PlayerAlcohol)){
+            System.out.println("-DRINKING2-");
+            PlayerAlcohol--;
+            if(ScannerDrinking(PlayerAlcohol)){
+                System.out.println("-DRINKING3-");
+                PlayerAlcohol--;
+            }
+        }
+    }
     Greeting();
     }
     void  Promotion(){}
