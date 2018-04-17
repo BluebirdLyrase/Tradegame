@@ -89,24 +89,24 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
             + "\n(6) Let talk about something else");
             switch(ScannerSwitch(6)){
             ////PLAYER BUYING
-                case 1 : PlayerBuying("Food",FoodPrice);
+                case 1 : PlayerBuying("Food",super.FoodPrice);
                          PlayerFood = QuantitySetter("+",PlayerFood);
                          Show("Food",PlayerFood);
                          Trade(); break;
-                case 2 : PlayerBuying("Jewelry",PlayerJewelry);
+                case 2 : PlayerBuying("Jewelry",this.PlayerJewelry);
                          PlayerJewelry = QuantitySetter("+",PlayerJewelry);
                          Show("Jewelry",PlayerJewelry);
                          Trade(); break;
-                case 3 : PlayerBuying("Medical",PlayerMedical);
+                case 3 : PlayerBuying("Medical",super.MedicalPrice);
                          PlayerMedical = QuantitySetter("+",PlayerMedical);
                          Show("Medical",PlayerMedical);
                          Trade(); break;
-                case 4 : PlayerBuying("Weapon",PlayerWeapon);
+                case 4 : PlayerBuying("Weapon",super.WeaponPrice);
                          PlayerWeapon = QuantitySetter("+",PlayerWeapon);
                          Show("Weapon",PlayerWeapon);
                          Trade(); break;
             ////PLAYER SELLING
-                case 5 : PlayerSelling("Jewelry",(PlayerJewelry/2),PlayerJewelry);
+                case 5 : PlayerSelling("Jewelry",(this.JewelryPrice/2),PlayerJewelry);
                          PlayerJewelry = QuantitySetter("-",PlayerJewelry);
                          Show("Jewelry",PlayerJewelry);
                          Trade(); break;
