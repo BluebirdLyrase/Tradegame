@@ -1,15 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tradegame;
 
-/**
- *
- * @author 6030213005
- */
 public class B2_MickerGorn extends CityDrylagoon implements Merchant {
+    int WeaponPrice = 5;
     //he will ask you to kill helena when he drink with you by posion her while drinking
     B2_MickerGorn (int PlayerMedical,int PlayerWeapon,int PlayerFood,
                       int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol,
@@ -74,8 +67,7 @@ public class B2_MickerGorn extends CityDrylagoon implements Merchant {
         }
     }
     Greeting();
-    }
-    
+    }  
     void  MagicTeach(){
         
     if(PlayerMagic[0]){
@@ -102,7 +94,7 @@ public class B2_MickerGorn extends CityDrylagoon implements Merchant {
             + "\n(8) I want to sell some weapon(1/"+(WeaponPrice/2)+"gold),[You have:"+PlayerWeapon+" Weapon]"      
             + "\n(9) Let talk about something else");
     switch(ScannerSwitch(9)){
-                case 1 : PlayerBuying("Food",PlayerFood);
+                case 1 : PlayerBuying("Food",this.FoodPrice);
                          PlayerFood = QuantitySetter("+",PlayerFood);
                          Show("Food",PlayerFood);
                          Trade(); break;
@@ -114,7 +106,7 @@ public class B2_MickerGorn extends CityDrylagoon implements Merchant {
                          PlayerMedical = QuantitySetter("+",PlayerMedical);
                          Show("Medical",PlayerMedical);
                          Trade(); break;
-                case 4 : PlayerBuying("Weapon",PlayerWeapon);
+                case 4 : PlayerBuying("Weapon",super.WeaponPrice);
                          PlayerWeapon = QuantitySetter("+",PlayerWeapon);
                          Show("Weapon",PlayerWeapon);
                          Trade(); break;
@@ -130,7 +122,7 @@ public class B2_MickerGorn extends CityDrylagoon implements Merchant {
                          PlayerMedical = QuantitySetter("-",PlayerMedical);
                          Show("Medical",PlayerMedical);
                          Trade(); break;
-                case 8 : PlayerSelling("Weapon",(PlayerWeapon/2),PlayerWeapon);
+                case 8 : PlayerSelling("Weapon",(super.WeaponPrice/2),PlayerWeapon);
                          PlayerWeapon = QuantitySetter("-",PlayerWeapon);
                          Show("Weapon",PlayerWeapon);
                          Trade(); break;

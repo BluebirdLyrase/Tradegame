@@ -11,13 +11,18 @@ public class demo {
         Drylagoon();
         System.out.println("drunk:"+player.drunk[2]+""+""+player.drunk[3]);
         System.out.println("Magic:"+player.getMagic(0)+""+""+player.getMagic(1));
-        //Redapple();
-        //player.Ending(player.CheckEnding());
+        Redapple();
         System.out.println("A:"+player.getArtifact(0)+""+""+player.getArtifact(1));
+
+        boolean JokeEnding = player.drunk[0]&&player.drunk[1]&&player.drunk[2]&&
+                             player.drunk[3]&&player.drunk[4]&&player.drunk[5];
+        boolean TrueEnding = player.getArtifact(0)&&player.getArtifact(1)&&player.getArtifact(2);
+        player.Ending(JokeEnding,TrueEnding,player.getGold());
+        
     }
     
         public static void Waterflake(){
-            
+                System.out.println("-------------------------------------");            
                 System.out.println("Choose Where to go"
                         + "\n(1)Lizza Good store"
                         + "\n(2)Waterfalke river"
@@ -66,12 +71,19 @@ public class demo {
                     case 4 :
                     System.out.println("Traveling to Drylagoon");    
                         break;
+                        
+                        
         }//switch
                 
     }//medthod wtf
-
         public static void Drylagoon(){
-                
+            System.out.println("-------------------------------------");  
+             System.out.println("Choose Where to go"
+                        + "\n(1)Old Magic School"
+                        + "\n(2)Blacksmite Store"
+                        + "\n(3)Drylagoon Guardhouse"
+                        + "\n(4)Travel to Redapple");
+            
                 switch(player.ScannerSwitch(4)){
 
                     case 1 :                        
@@ -113,6 +125,12 @@ public class demo {
                 }
         }        
         public static void Redapple(){
+            System.out.println("-------------------------------------");  
+                 System.out.println("Choose Where to go"
+                        + "\n(1)The Hunter Hub"
+                        + "\n(2)Redapple Guardhouse"
+                        + "\n(3)Black store"
+                        + "\n(4)End the game");
                 
                 switch(player.ScannerSwitch(4)){
                     case 1 : C1_GabrielSnyder Gabriel = new C1_GabrielSnyder(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
@@ -143,7 +161,9 @@ public class demo {
                 ////////////////////////////////////////////////////////////////////////////////////////////////////
                 case 4 :;
                 }
-        }  
+        }
+
+        
         
 }//class
 

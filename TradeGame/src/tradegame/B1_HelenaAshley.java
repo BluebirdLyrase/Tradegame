@@ -68,7 +68,7 @@ public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
     }
     Greeting();
     }
-    void  MagicTeach(){
+    void MagicTeach(){
     if(PlayerMagic[0]){System.out.println("learn lewl");
     }else{
     PlayerMagic[0] = true ;

@@ -19,10 +19,9 @@ public class Player extends Scan {
     private int Jewelry = 4000  ;
     private int Gold = 6000 ;
     private boolean[] Artifact = {false,false,false};
-    private boolean ArtifactCheck = Artifact[0]&&Artifact[1]&&Artifact[2];
     private String[] ArtifactName ={"-Waterflake Ancient Necklace","-Secret Magic Knowledge","-Dragon's egg"};
     private String[] ShowInventoryName = {"Gold","Medical","Weapon","Food","Jewelry","Manpower","Alcohol"};
-    boolean[] drunk = {false,false,false,false,false,false,}; 
+    public boolean[] drunk = {false,false,false,false,false,false,}; 
     //[0] Jack
     //[1] Priscilla Rose
     //[2] Helena
@@ -92,19 +91,6 @@ public class Player extends Scan {
     this.Alcohol =Alcohol ;
     }
     
-    char CheckEnding(){
-    //switch  
-    char ending = 0;
-    return ending;
-    }
-    
-    void Ending(char ending){
-    switch(ending){
-        case '0' : //do nothing
-    
-    }
-    }
-    
     void setArtifact(int position,boolean check){
     if(check)Artifact[position] = true;
     }
@@ -132,4 +118,25 @@ public class Player extends Scan {
     boolean getMagic(int position){
     return Magic[position];
     }
+    
+    void Ending(boolean JokeEnding,boolean TrueEnding,int FinalGold){
+    if(TrueEnding){
+        System.out.println("True Ending");
+    }else{
+        if(FinalGold>=5000){
+            System.out.println("Common Ending");
+        }else{
+            if(JokeEnding){
+                    System.out.println("Joke Ending");
+                }else{
+                            System.out.println("Bad Ending");
+                        }
+            }
+    
+         }
+    
+    
+    
+    }
+    
 }

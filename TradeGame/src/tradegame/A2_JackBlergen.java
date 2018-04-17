@@ -40,13 +40,17 @@ public class A2_JackBlergen extends CityWaterflake implements Explorer {
     System.out.println("-DRINKING-");
     //1 tell Lizz secret 2 tell his real pass 3 tell his secret <<< inw wizard
     if(ScannerDrinking(PlayerAlcohol)){
-        System.out.println("DRINKING-1");
+        System.out.println("Jack:Have you see the women in the store yet ?"
+                + "\n Once i see her tranform to  a souless monster at night in the forest.");
         PlayerAlcohol--;
         if(ScannerDrinking(PlayerAlcohol)){
-            System.out.println("DRINKING-2");
+            System.out.println("Jack:Do you believed that I once saw the tears of the Witch?"
+                    + "\n I saw her crying four ... maybe three years ago.");
             PlayerAlcohol--;
             if(ScannerDrinking(PlayerAlcohol)){
-                System.out.println("DRINKING-3");
+                System.out.println("Jack:Once upon a time, there is a great and powerful wizard"
+                        + "\n seeking for artifacts of the old world. He and his men dive into this river"
+                        + "\n And never comeback. In reality I may retired don't you think?");
                 PlayerAlcohol--;
                 this.drinking = true ;
                                 }
@@ -61,11 +65,16 @@ public class A2_JackBlergen extends CityWaterflake implements Explorer {
             + "\n(3) Tell me about yourself"
             + "\n(4) Let talk about something else.");
             switch(ScannerSwitch(4)){
-                case 1 : System.out.println("artifacts"); 
+                case 1 : System.out.println("Jack: Artifacts is the old things for the old world before adn during invasion."
+                        + "As soon as you get one you need to sent it to the guardian"); 
                          Asking(); break;
-                case 2 : System.out.println("artifact in this river-"); 
+                case 2 : System.out.println("Jack: Once I dive down into this river by fallowing the rumour"
+                        + "\nI saw a little shiny thing, but I didn't have enough mana to reach it"
+                        + "\nsuch a shame."); 
                          Asking(); break;
-                case 3 : System.out.println("Yourself");
+                case 3 : System.out.println("Jack: Me? I used to be the Explorer but I lost everything during "
+                        + "searching artifact in this river, then I end up here. Fishing for food day to day."
+                        + "Sleeping on a pile useless weapon.");
                          Asking(); break;
                 case 4 : Greeting(); break;
             }
@@ -76,13 +85,12 @@ public class A2_JackBlergen extends CityWaterflake implements Explorer {
         }else{
         System.out.println("Jack: Finally someone with the eyes");
         PlayerGold = PlayerGold - ExplorCost ;
-        System.out.println("'At night Jack comeback and give you $!!#$!%@% "
-                + "\n you never see him agian...'");
+        System.out.println("'At night Jack comeback and give you a gold necklace "
+                + "\n and no one ever see him agian...'");
         Necklace = true ;
         }
     }
     void FreeTrade(){
-        ///it is basic trade not really freetrade
     System.out.println("(1) I want your weapon."
             + "\n(2) Let talk about something else.");
             switch(ScannerSwitch(2)){ 
@@ -90,8 +98,10 @@ public class A2_JackBlergen extends CityWaterflake implements Explorer {
                 if(FreeWeaponGave){
                 System.out.println("I gave you every Weapon I have.");
                 }else{
+                System.out.println("You can have all of it. They have no use for me anymore");
                 PlayerWeapon = PlayerWeapon  + 10;  
                 FreeWeaponGave = true ;
+                break ;
                 }    
                 case 2 : System.out.println("So, what now ?"); Greeting(); break;
             }
