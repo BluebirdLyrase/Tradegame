@@ -21,6 +21,12 @@ public class Player extends Scan {
     private boolean[] Artifact = {false,false,false};
     private String[] ArtifactName ={"-Waterflake Ancient Necklace","-Secret Magic Knowledge","-Dragon's egg"};
     private String[] ShowInventoryName = {"Gold","Medical","Weapon","Food","Jewelry","Manpower","Alcohol"};
+    public boolean[] report = {false,false};
+    //[0] Mick
+    //[1] Blue
+    public boolean[] reported = {false,false} ;
+    //[0] Drylagoon
+    //[1] Redapple
     public boolean[] drunk = {false,false,false,false,false,false,}; 
     //[0] Jack
     //[1] Priscilla Rose

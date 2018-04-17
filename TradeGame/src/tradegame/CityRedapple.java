@@ -13,6 +13,21 @@ abstract class CityRedapple extends City {
     this.PlayerGold = PlayerGold;
     this.PlayerAlcohol = PlayerAlcohol;
 }
+    
+    public void PlayerPromotion(String WhatIsIt,int HowMuch,String NpcName){
+    System.out.println("10 "+WhatIsIt+" for "+HowMuch*10+" gold");          
+    System.out.println(NpcName+": How many pack do you want?");
+    do{
+    System.out.println(WhatIsIt+" Pack>>>");
+    Quantity = ScannerTrade()*10;
+    if(Quantity==0)System.out.println(NpcName+": So, What do you want");
+    TotalPrice = Quantity*HowMuch;
+    if(TotalPrice>PlayerGold){
+    System.out.println(NpcName+": That is not enough gold");}
+    }while(TotalPrice>PlayerGold);
+    GoldSetter("-");
+    Show("Gold",PlayerGold);
+    }
 
 //merchant of Redapple have a promotion for buy goods with correct quentity
 abstract void  Promotion();    

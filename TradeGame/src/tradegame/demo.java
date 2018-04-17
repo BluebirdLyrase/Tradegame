@@ -103,21 +103,31 @@ public class demo {
                         Drylagoon();
                         break;
                     ////////////////////////////////////////////////////////////////////////////////////////////////////
-                    case 2 : B2_MickerGorn Mick = new B2_MickerGorn(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
-                                                                    player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[3],player.getMagic(0),player.getMagic(1));
+                    case 2 : 
+                        if(player.reported[0]){
+                         System.out.println("He has gone");
+                        }else{
+                        B2_MickerGorn Mick = new B2_MickerGorn(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),player.getMen(),
+                                                                    player.getGold(),player.getAlcohol(),player.drunk[3],player.getMagic(0),player.getMagic(1)
+                                                                    ,player.report[0]);
                         player.setPlayerInventory(Mick.PlayerMedical,Mick.PlayerWeapon,Mick.PlayerFood,
                                                   Mick.PlayerJewelry,Mick.PlayerMen,Mick.PlayerGold,Mick.PlayerAlcohol);
                         player.ShowInventory();
                         player.setDrunk(Mick.drinking,3);
                         player.setMagic(Mick.PlayerMagic[1],1);
+                        player.report[0] = Mick.report;
+                        }
+                        
                         Drylagoon();
                         break;
                     ////////////////////////////////////////////////////////////////////////////////////////////////////
                     case 3 : B3_KalonShield Kalon = new B3_KalonShield(player.getMedical(),player.getWeapon(),player.getFood(),
-                                                                       player.getJewelry(),player.getMen(),player.getGold(),player.getAlcohol());
+                                                                       player.getJewelry(),player.getMen(),player.getGold(),player.getAlcohol()
+                                                                       ,player.report[0],player.reported[0]);
                         player.setPlayerInventory(Kalon.PlayerMedical,Kalon.PlayerWeapon,Kalon.PlayerFood,
                                                   Kalon.PlayerJewelry,Kalon.PlayerMen,Kalon.PlayerGold,Kalon.PlayerAlcohol);
                         player.ShowInventory();
+                        player.reported[0] = Kalon.reported ;
                         Drylagoon();
                         break;
                     ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -143,19 +153,27 @@ public class demo {
                     break;
                 ////////////////////////////////////////////////////////////////////////////////////////////////////
                 case 2 : C2_FoxPocketwatch Fox = new C2_FoxPocketwatch(player.getMedical(),player.getWeapon(),player.getFood(),
-                                                                           player.getJewelry(),player.getMen(),player.getGold(),player.getAlcohol());
+                                                                       player.getJewelry(),player.getMen(),player.getGold(),player.getAlcohol()
+                                                                       ,player.report[1],player.reported[1]);
                     player.setPlayerInventory(Fox.PlayerMedical,Fox.PlayerWeapon,Fox.PlayerFood,
                                               Fox.PlayerJewelry,Fox.PlayerMen,Fox.PlayerGold,Fox.PlayerAlcohol);
+                    player.reported[1] = Fox.reported;
                     player.ShowInventory();
                     Redapple();
                     break;
                 ////////////////////////////////////////////////////////////////////////////////////////////////////
-                case 3 : C3_BlueLyrase Blue = new C3_BlueLyrase(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
-                                                                player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[5]);
+                case 3 : 
+                     if(player.reported[1]){
+                    System.out.println("He has gone");
+                    }else{
+                    C3_BlueLyrase Blue = new C3_BlueLyrase(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
+                                                                player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[5],player.report[1]);
                     player.setPlayerInventory(Blue.PlayerMedical,Blue.PlayerWeapon,Blue.PlayerFood,
                                               Blue.PlayerJewelry,Blue.PlayerMen,Blue.PlayerGold,Blue.PlayerAlcohol);
+                    player.report[1] = Blue.report ;
                     player.setDrunk(Blue.drinking,5);
                     player.ShowInventory();
+                     }
                     Redapple();
                     break;
                 ////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -4,11 +4,6 @@
  * and open the template in the editor.
  */
 package tradegame;
-
-/**
- *
- * @author 6030213005
- */
 public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer {
     boolean MagicRequirtoExplor ;
     int JewelryPrice = 20;
@@ -75,7 +70,20 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
     }
     Greeting();
     }
-    void  Promotion(){}
+    void  Promotion(){
+    System.out.println("You can buy 10 medical with a half price(10/50 gold)"
+            + "(1) I want to buy some medical."
+            + "(2) Let talk about something else.");
+            switch(ScannerSwitch(2)){
+                case 1 :
+                        PlayerPromotion("Medical",super.MedicalPrice,"Gabriel");
+                        PlayerMedical = QuantitySetter("+",PlayerMedical);
+                        Show("Medical",PlayerMedical);
+                        Promotion();
+                        break;
+                case 2 : Greeting();
+            }
+    }
     public void Trade(){
     System.out.println("[Your Gold : "+PlayerGold+" ]");    
     System.out.println("(1) I want to buy some food(1/"+FoodPrice+"gold)"
@@ -118,7 +126,7 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
     
     public void PlayerBuying(String WhatIsIt,int HowMuch){
     System.out.println("1 "+WhatIsIt+" for "+HowMuch+" gold");          
-    System.out.println("Gabriel: -TRADE1-");
+    System.out.println("Gabriel: How many do you want?");
     do{
     System.out.println(WhatIsIt+" Quantity>>>");
     Quantity = ScannerTrade();
@@ -146,11 +154,10 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
     Show("Gold",PlayerGold);
     }
     public void Explor(){
-    
-    
         
         
-    
-    
+        
+        
+        
     }
 }

@@ -18,8 +18,6 @@ public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
     Greeting();
     System.out.println("Helena: -BYE-");
     }
-
-
     
     void Greeting(){
     System.out.println("(1) -ASKING-"

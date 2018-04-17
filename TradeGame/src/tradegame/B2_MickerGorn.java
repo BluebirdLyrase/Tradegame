@@ -2,14 +2,16 @@
 package tradegame;
 
 public class B2_MickerGorn extends CityDrylagoon implements Merchant {
+    boolean report;
     int WeaponPrice = 5;
     //he will ask you to kill helena when he drink with you by posion her while drinking
     B2_MickerGorn (int PlayerMedical,int PlayerWeapon,int PlayerFood,
                       int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol,
-                      boolean drinking,boolean PlayerMagic0,boolean  PlayerMagic1){    
+                      boolean drinking,boolean PlayerMagic0,boolean  PlayerMagic1,boolean report){    
         
     super(PlayerMedical,PlayerWeapon,PlayerFood,
           PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);    
+    this.report = report;
     this.drinking = drinking;
     this.PlayerMagic[0] = PlayerMagic0 ;
     this.PlayerMagic[1] = PlayerMagic1 ;
@@ -60,9 +62,10 @@ public class B2_MickerGorn extends CityDrylagoon implements Merchant {
             System.out.println("-DRINKING2-");
             PlayerAlcohol--;
             if(ScannerDrinking(PlayerAlcohol)){
-                System.out.println("-DRINKING3-");
+                System.out.println("Micker: I kill Helena husbend");
                 PlayerAlcohol--;
                 this.drinking = true ;
+                report = true ;
             }
         }
     }

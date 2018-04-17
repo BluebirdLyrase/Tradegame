@@ -1,11 +1,14 @@
 
 package tradegame;
 public class B3_KalonShield extends CityDrylagoon implements Guardian  {
-    
+    boolean report,reported;
     B3_KalonShield (int PlayerMedical,int PlayerWeapon,int PlayerFood,
-                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
+                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol
+                       ,boolean report,boolean reported){
     super(PlayerMedical,PlayerWeapon,PlayerFood,
-          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);    
+          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);
+    this.report = report ;
+    this.reported = reported ;
     System.out.println("[Person:Kalon Shield]");
     System.out.println("Kalon: -GREET-"); 
     Greeting();
@@ -49,7 +52,26 @@ public class B3_KalonShield extends CityDrylagoon implements Guardian  {
     Greeting();
     }
     void MagicTeach(){}
-    public void Report(){}
+    public void Report(){
+    if(report){
+        System.out.println("(1) Report."
+                       + "\n(2) noting");
+        switch(ScannerSwitch(2)){
+            case 1 : 
+            if(reported){
+                PlayerGold = PlayerGold + 1000;
+                Show("Gold",PlayerGold);
+            }else{
+            System.out.println("Already report");
+            }           
+                break;
+            case 2 : 
+        }
+    }else{
+    System.out.println("There are nothing to report");
+    }   
+    Greeting();
+    }
     //report about Micker want to murder Helena
     //report about Helena have Life Magic mutent potion 
 }

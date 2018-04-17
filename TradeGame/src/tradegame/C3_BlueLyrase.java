@@ -1,12 +1,14 @@
 
 package tradegame;
 public class C3_BlueLyrase extends CityRedapple implements Merchant,LaborBroker{
+boolean report;
     
     int WeaponPrice = 20;
     C3_BlueLyrase (int PlayerMedical,int PlayerWeapon,int PlayerFood,int PlayerJewelry,
-                    int PlayerMen,int PlayerGold,int PlayerAlcohol,boolean drinking){    
+                    int PlayerMen,int PlayerGold,int PlayerAlcohol,boolean drinking,boolean report){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
           PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);
+    this.report = report;
     this.drinking=drinking;
     System.out.println("[Person:Blue Lyrase]");
     System.out.println("Blue: -GREET-"); 
@@ -19,15 +21,13 @@ public class C3_BlueLyrase extends CityRedapple implements Merchant,LaborBroker{
             + "\n(2) -DRINKING-"
             + "\n(3) -PROMOTION-"
             + "\n(4) -TRADE-"
-            + "\n(5) -Blackmarket"
-            + "\n(6) I need to go.");
-            switch(ScannerSwitch(6)){
+            + "\n(5) I need to go.");
+            switch(ScannerSwitch(5)){
                 case 1 : Asking(); break;
                 case 2 : Drinking(); break;
                 case 3 : Promotion(); break;
                 case 4 : Trade(); break;
-                case 5 : Blackmarket(); break;
-                case 6 : break;
+                case 5 : break;
             }
     } 
     void Asking(){
@@ -65,7 +65,10 @@ public class C3_BlueLyrase extends CityRedapple implements Merchant,LaborBroker{
     }
     Greeting();
     }
-    void Promotion(){}  
+    void Promotion(){
+    //BlackMarjet
+    report = true;
+    }  
     public void Trade(){
     System.out.println("[Your Gold : "+PlayerGold+" ]");    
     System.out.println("(1) I want to buy some food(1/"+FoodPrice+"gold)"
@@ -143,7 +146,5 @@ public class C3_BlueLyrase extends CityRedapple implements Merchant,LaborBroker{
     }
     }while(Quantity>HowManyYouHave);
     }
-    public void Explor(){}
     public void HireMan(){}
-    void Blackmarket(){}
 }

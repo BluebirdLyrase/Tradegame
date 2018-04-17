@@ -30,10 +30,7 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
                 case 5 : Buymoonshine();break;
                 case 6 : FreeTrade(); break ;   
                 case 7 : break ;   
-                
-            }
-         
-     
+            }   
      }
      
     void Sleeping(){

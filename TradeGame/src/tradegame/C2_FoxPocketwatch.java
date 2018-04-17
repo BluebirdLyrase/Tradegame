@@ -1,20 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tradegame;
 
-/**
- *
- * @author 6030213005
- */
 public class C2_FoxPocketwatch extends CityRedapple implements Guardian {
-    
+ boolean report , reported ;
     C2_FoxPocketwatch(int PlayerMedical,int PlayerWeapon,int PlayerFood,
-                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
+                      int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol
+                      ,boolean report,boolean reported){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
-          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);    
+          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);  
+    this.report = report;
+    this.reported = reported;
     System.out.println("[Person:Fox Pocketwatch]");
     System.out.println("Fox: -GREET-"); 
     Greeting();
@@ -34,7 +29,7 @@ public class C2_FoxPocketwatch extends CityRedapple implements Guardian {
                 case 4 : Report(); break;
                 case 5 : break;
             }
-    } 
+    }
     void Asking(){
     System.out.println("(1) Tell me about Waterflake."
             + "\n(2) Tell me about Drylagoon."
