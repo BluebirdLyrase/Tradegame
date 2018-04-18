@@ -55,20 +55,21 @@ public class B3_KalonShield extends CityDrylagoon implements Guardian  {
     public void Report(){
     if(report){
         System.out.println("(1) Report."
-                       + "\n(2) noting");
+                       + "\n(2) noting.");
         switch(ScannerSwitch(2)){
             case 1 : 
             if(reported){
+                System.out.println("Already report");
+            }else{
                 PlayerGold = PlayerGold + 1000;
                 Show("Gold",PlayerGold);
-            }else{
-            System.out.println("Already report");
+                reported = true;
             }           
-                break;
+            break;
             case 2 : 
         }
     }else{
-    System.out.println("There are nothing to report");
+    System.out.println("There are nothing to report.");
     }   
     Greeting();
     }

@@ -22,7 +22,7 @@ public class demo {
     }
     
         public static void Waterflake(){
-                System.out.println("-------------------------------------");            
+                System.out.println("-------------------------------------");
                 System.out.println("Choose Where to go"
                         + "\n(1)Lizza Good store"
                         + "\n(2)Waterfalke river"

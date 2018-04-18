@@ -53,5 +53,25 @@ public class C2_FoxPocketwatch extends CityRedapple implements Guardian {
     Greeting();
     }
     void Promotion(){}    
-    public void Report(){}
+    public void Report(){
+    if(report){
+        System.out.println("(1) Report."
+                         + "\n(2) noting.");
+        switch(ScannerSwitch(2)){
+            case 1 : 
+                if(reported){
+                    System.out.println("Already report");
+                }else{
+                    PlayerGold = PlayerGold + 1000;
+                    Show("Gold",PlayerGold);
+                    reported = true;
+                }
+                break;
+            case 2 :
+        }
+    }else{
+        System.out.println("There is noting to report.");
+    }
+    Greeting();
+    }
 }
