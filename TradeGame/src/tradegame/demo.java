@@ -7,13 +7,10 @@ public class demo {
         
         System.out.println("Story blaqqq");
         Waterflake();
-        System.out.println("drunk:"+player.drunk[0]+""+""+player.drunk[1]);
+        //////////////////////ใส่ travel 
         Drylagoon();
-        System.out.println("drunk:"+player.drunk[2]+""+""+player.drunk[3]);
-        System.out.println("Magic:"+player.getMagic(0)+""+""+player.getMagic(1));
+        //////////////////////ใส่ travel 
         Redapple();
-        System.out.println("A:"+player.getArtifact(0)+""+""+player.getArtifact(1));
-
         boolean JokeEnding = player.drunk[0]&&player.drunk[1]&&player.drunk[2]&&
                              player.drunk[3]&&player.drunk[4]&&player.drunk[5];
         boolean TrueEnding = player.getArtifact(0)&&player.getArtifact(1)&&player.getArtifact(2);
@@ -61,8 +58,8 @@ public class demo {
                         System.out.println(">>>Entering Heartwarming inn<<<");
                         A3_PriscillaRose Rose = new A3_PriscillaRose(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
                                                                         player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[1]);
-                        player.setPlayerInventory(Rose.PlayerMedical,Rose.PlayerWeapon,Rose.PlayerFood,
-                                                  Rose.PlayerJewelry,Rose.PlayerMen,Rose.PlayerGold,Rose.PlayerAlcohol);
+                        player.setPlayerInventory(Rose.PlayerMedical,Rose.PlayerWeapon,Rose.PlayerFood,Rose.PlayerJewelry,
+                                                    Rose.PlayerMen,Rose.PlayerGold,Rose.PlayerAlcohol);
                         player.ShowInventory();
                         player.setDrunk(Rose.drinking,1);
                         Waterflake();

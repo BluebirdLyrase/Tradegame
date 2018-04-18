@@ -7,13 +7,14 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
     A1_LizzaRobinhood(int PlayerMedical,int PlayerWeapon,int PlayerFood,
                       int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
-          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);    
+          PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);
     System.out.println("[Person:Lizza Robinhood]");
     System.out.println("Lizza: Welcome to Lizza Good store What can I help you?"); 
     Greeting();
     System.out.println("Lizza: See you around.");
     }
     void Greeting(){
+    ShowInventory();//////////////////////////////////////////////////////////////////////////////////////////////////////////    
     System.out.println("(1) Can I ask you something ?"
             + "\n(2) How about a drink ?"
             + "\n(3) Let me see your wares."

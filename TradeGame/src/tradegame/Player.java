@@ -20,7 +20,7 @@ public class Player extends Scan {
     private int Gold = 6000 ;
     private boolean[] Artifact = {false,false,false};
     private String[] ArtifactName ={"-Waterflake Ancient Necklace","-Secret Magic Knowledge","-Dragon's egg"};
-    private String[] ShowInventoryName = {"Gold","Medical","Weapon","Food","Jewelry","Manpower","Alcohol"};
+    private String[] ShowInventoryName = {"Gold     ","Medical  ","Weapon   ","Food     ","Jewelry  ","Manpower      ","Moonshine"};
     public boolean[] report = {false,false};
     //[0] Mick
     //[1] Blue
@@ -87,7 +87,7 @@ public class Player extends Scan {
     return Gold ;
     }
     //////////////////////////////////////////////////
-    void setPlayerInventory(int Medical,int Weapon,int Food,int Men,int Jewelry,int Gold,int Alcohol ){
+    void setPlayerInventory(int Medical,int Weapon,int Food,int Jewelry,int Men,int Gold,int Alcohol ){
     this.Medical = Medical ;
     this.Weapon = Weapon  ;
     this.Food = Food  ;

@@ -41,6 +41,21 @@ abstract class City extends Scan {
     System.out.println("Now you have "+HowMany+" "+WhatIsIt);
     }
     
+    void ShowInventory(){
+        System.out.println("----------------------------------------------------");
+        System.out.println("[Supply]"
+                + "\nGold     :" + PlayerGold 
+                + "\nMedical  :" + PlayerMedical
+                + "\nWeapon   :" + PlayerWeapon
+                + "\nFood     :" + PlayerFood
+                + "\nJewelry  :" + PlayerJewelry
+                + "\nMen      :" + PlayerMen
+                + "\nMoonshine:"+PlayerAlcohol);
+        System.out.println("----------------------------------------------------");
+    }
+    
+    
+    
     
 
 }

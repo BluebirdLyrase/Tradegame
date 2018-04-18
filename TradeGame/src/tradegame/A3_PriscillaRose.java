@@ -34,7 +34,7 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
      }
      
     void Sleeping(){
-     //player got Nightmare about halfBeastmonster
+    Greeting();
      }
     void Asking(){
     System.out.println("(1) Tell me about yourself"
@@ -84,6 +84,7 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
     Show("Gold",PlayerGold);//show player gold
     PlayerMen = QuantitySetter("+",PlayerMen);
     Show("Men",PlayerMen);
+    Greeting();
     }    
      
     
@@ -104,6 +105,7 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
     Show("Gold",PlayerGold);//show player gold         
     PlayerAlcohol = QuantitySetter("+",PlayerAlcohol); 
     Show("Moonshine",PlayerAlcohol); 
+    Greeting();
      }
     void FreeTrade(){
          
