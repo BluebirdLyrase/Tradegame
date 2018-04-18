@@ -146,12 +146,19 @@ public class demo {
                         + "\n(4)End the game");
                 
                 switch(player.ScannerSwitch(4)){
-                    case 1 : C1_GabrielSnyder Gabriel = new C1_GabrielSnyder(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
+
+                    case 1 : 
+                        if(player.getArtifact(2)){
+                        System.out.println("'He is gone'");    
+                        }else{
+                        C1_GabrielSnyder Gabriel = new C1_GabrielSnyder(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
                                                                              player.getMen(),player.getGold(),player.getAlcohol(),player.drunk[4],player.getMagic(1));
                     player.setPlayerInventory(Gabriel.PlayerMedical,Gabriel.PlayerWeapon,Gabriel.PlayerFood,
                                               Gabriel.PlayerJewelry,Gabriel.PlayerMen,Gabriel.PlayerGold,Gabriel.PlayerAlcohol);
                     player.setDrunk(Gabriel.drinking,4);
                     player.ShowInventory();
+                    player.setArtifact(2,Gabriel.Dragonegg);
+                                }
                     Redapple();
                     break;
                 ////////////////////////////////////////////////////////////////////////////////////////////////////

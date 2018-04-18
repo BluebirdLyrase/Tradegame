@@ -5,7 +5,7 @@
  */
 package tradegame;
 public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer {
-    boolean MagicRequirtoExplor ;
+    boolean MagicRequirtoExplor,Dragonegg ;
     int JewelryPrice = 20;
     C1_GabrielSnyder(int PlayerMedical,int PlayerWeapon,int PlayerFood,
                       int PlayerJewelry,int PlayerMen,int PlayerGold,
@@ -76,7 +76,7 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
             + "\n(2) Let talk about something else.");
             switch(ScannerSwitch(2)){
                 case 1 :
-                        PlayerPromotion("Medical",super.MedicalPrice,"Gabriel");
+                        PlayerPromotion("Medical",MedicalPrice/2,"Gabriel");
                         PlayerMedical = QuantitySetter("+",PlayerMedical);
                         Show("Medical",PlayerMedical);
                         Promotion();
@@ -154,10 +154,15 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
     Show("Gold",PlayerGold);
     }
     public void Explor(){
-        
-        
-        
-        
-        
+        if(MagicRequirtoExplor){
+        System.out.println("found and Fight the dragon.");
+        System.out.println("You got dragon's egg.");
+        System.out.println("But the Monster Hunter dead.");
+        Dragonegg = true ;
+        }
+        else
+        {
+        System.out.println("You found nothing in the forest.");
+        }
     }
 }

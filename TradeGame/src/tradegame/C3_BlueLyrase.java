@@ -3,7 +3,11 @@ package tradegame;
 public class C3_BlueLyrase extends CityRedapple implements Merchant,LaborBroker{
 boolean report;
     
-    int WeaponPrice = 20;
+    int MedicalPrice = 1 ;
+    int WeaponPrice = 1;
+    int FoodPrice = 1; 
+    int JewelryPrice = 1; 
+    int Manprice = 1; 
     C3_BlueLyrase (int PlayerMedical,int PlayerWeapon,int PlayerFood,int PlayerJewelry,
                     int PlayerMen,int PlayerGold,int PlayerAlcohol,boolean drinking,boolean report){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
@@ -66,30 +70,32 @@ boolean report;
     Greeting();
     }
     void Promotion(){
-    System.out.println("[Your Gold : "+PlayerGold+" ]");    
-    System.out.println("(1) I want to buy some food(1/"+FoodPrice+"gold)"
-            + "\n(2) I want to buy some jewelry(1/"+JewelryPrice+"gold)"
-            + "\n(3) I want to buy some medical supply(1/"+MedicalPrice+"gold)"   
-            + "\n(4) I want to buy some weapon supply(1/"+WeaponPrice+"gold)"
-            + "\n(5) Let talk about something else.");
-            switch(ScannerSwitch(5)){
-                case 1 : PlayerBuying("Food",5);
+    System.out.println("[Your Gold : "+this.PlayerGold+" ]");    
+    System.out.println("(1) I want to buy some food(1/"+this.FoodPrice+"gold)"
+            + "\n(2) I want to buy some jewelry(1/"+this.JewelryPrice+"gold)"
+            + "\n(3) I want to buy some medical supply(1/"+this.MedicalPrice+"gold)"   
+            + "\n(4) I want to buy some weapon supply(1/"+this.WeaponPrice+"gold)"
+            + "\n(5) I want to hire some outcast(1/"+this.Manprice+"gold)"
+            + "\n(6) Let talk about something else.");
+            switch(ScannerSwitch(6)){
+                case 1 : PlayerBuying("Food",this.FoodPrice);
                          PlayerFood = QuantitySetter("+",PlayerFood);
                          Show("Food",PlayerFood);
                          Promotion(); break;
-                case 2 : PlayerBuying("Jewelry",10);
+                case 2 : PlayerBuying("Jewelry",this.JewelryPrice);
                          PlayerJewelry = QuantitySetter("+",PlayerJewelry);
                          Show("Jewelry",PlayerJewelry);
                          Promotion(); break;
-                case 3 : PlayerBuying("Medical",5);
+                case 3 : PlayerBuying("Medical",this.MedicalPrice);
                          PlayerMedical = QuantitySetter("+",PlayerMedical);
                          Show("Medical",PlayerMedical);
                          Promotion(); break;
-                case 4 : PlayerBuying("Weapon",5);
+                case 4 : PlayerBuying("Weapon",this.WeaponPrice);
                          PlayerWeapon = QuantitySetter("+",PlayerWeapon);
                          Show("Weapon",PlayerWeapon);
                          Promotion(); break;
-                case 5 : Greeting(); break;
+                case 5 : HireMan();break;
+                case 6 : Greeting(); break;
     }  
     report = true;
     }
@@ -133,7 +139,7 @@ boolean report;
                          PlayerMedical = QuantitySetter("-",PlayerMedical);
                          Show("Medical",PlayerMedical);
                          Trade(); break;
-                case 8 : PlayerSelling("Weapon",(this.WeaponPrice/2),PlayerWeapon);
+                case 8 : PlayerSelling("Weapon",(super.WeaponPrice/2),PlayerWeapon);
                          PlayerWeapon = QuantitySetter("-",PlayerWeapon);
                          Show("Weapon",PlayerWeapon);
                          Trade(); break;
@@ -170,5 +176,22 @@ boolean report;
     }
     }while(Quantity>HowManyYouHave);
     }
-    public void HireMan(){}
+    public void HireMan(){
+    System.out.println("Blue: How many slave do you want to buy?");    
+    do{   
+    System.out.println("Men Quantity>>>");
+    Quantity=ScannerTrade(); //for Scan amount of goods player want to Buy
+    if(Quantity==0)System.out.println("Blue: Look like you don't want any slave."); //if player type 0 amount of goods 
+    TotalPrice = Quantity*Manprice; // to set amount of player's gold that will be use in GoldSetter(-)
+    if(TotalPrice>PlayerGold){//Happening when player type more amount of Good then he can afford it 
+    System.out.println("Blue: Sorry, that is not enough gold to hire "+Quantity+" amount of men. "
+              + "\n you may change that number or go away.");
+    }
+    }while(TotalPrice>PlayerGold);
+    GoldSetter("-");//Goldsetter will use variable in this class by itself - mean to decresed player gold that setgold() mean to set new amount of player gold
+    Show("Gold",PlayerGold);//show player gold
+    PlayerMen = QuantitySetter("+",PlayerMen);
+    Show("Men",PlayerMen);
+    Greeting();
+    }
 }

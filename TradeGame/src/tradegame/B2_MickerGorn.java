@@ -125,7 +125,7 @@ public class B2_MickerGorn extends CityDrylagoon implements Merchant {
                          PlayerMedical = QuantitySetter("-",PlayerMedical);
                          Show("Medical",PlayerMedical);
                          Trade(); break;
-                case 8 : PlayerSelling("Weapon",(super.WeaponPrice/2),PlayerWeapon);
+                case 8 : PlayerSelling("Weapon",(this.WeaponPrice/2),PlayerWeapon);
                          PlayerWeapon = QuantitySetter("-",PlayerWeapon);
                          Show("Weapon",PlayerWeapon);
                          Trade(); break;

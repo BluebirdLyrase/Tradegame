@@ -9,6 +9,7 @@ Travel(int PlayerMedical,int PlayerWeapon,int PlayerFood,int PlayerMen,
     //this();
     this.PlayerMedical = PlayerMedical;
     this.PlayerWeapon = PlayerWeapon;
+    this.PlayerFood = PlayerFood;
     this.PlayerMen = PlayerMen;
     this.PlayerJewelry = PlayerJewelry;
     this.PlayerGold = PlayerGold;
