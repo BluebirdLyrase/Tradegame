@@ -7,9 +7,15 @@ public class demo {
         
         System.out.println("Story blaqqq");
         Waterflake();
-        //////////////////////ใส่ travel 
+        Travel t = new Travel(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
+                              player.getMen(),player.getGold(),player.getArtifact(0),"Drylagoon");
+        player.setPlayerInventory(t.PlayerMedical,t.PlayerWeapon,t.PlayerFood,
+                                                     t.PlayerMen,t.PlayerJewelry,t.PlayerGold,player.getAlcohol());
         Drylagoon();
-        //////////////////////ใส่ travel 
+        Travel t2 = new Travel(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
+               player.getMen(),player.getGold(),player.getArtifact(0),"Redapple");
+        player.setPlayerInventory(t2.PlayerMedical,t2.PlayerWeapon,t2.PlayerFood,
+                                                     t2.PlayerMen,t2.PlayerJewelry,t2.PlayerGold,player.getAlcohol());
         Redapple();
         boolean JokeEnding = player.drunk[0]&&player.drunk[1]&&player.drunk[2]&&
                              player.drunk[3]&&player.drunk[4]&&player.drunk[5];
@@ -31,7 +37,7 @@ public class demo {
                         A1_LizzaRobinhood Lizz = new A1_LizzaRobinhood(player.getMedical(),player.getWeapon(),player.getFood(),
                                                                        player.getJewelry(),player.getMen(),player.getGold(),player.getAlcohol());
                         player.setPlayerInventory(Lizz.PlayerMedical,Lizz.PlayerWeapon,Lizz.PlayerFood,
-                                                     Lizz.PlayerMen,Lizz.PlayerJewelry,Lizz.PlayerGold,Lizz.PlayerAlcohol );
+                                                     Lizz.PlayerJewelry,Lizz.PlayerMen,Lizz.PlayerGold,Lizz.PlayerAlcohol );
                         player.ShowInventory();
                         Waterflake();
                         break;

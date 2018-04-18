@@ -1,6 +1,95 @@
 package tradegame;
 public class Travel {
     
+int PlayerMedical,PlayerWeapon,PlayerFood,PlayerMen,PlayerJewelry,PlayerGold;
+boolean artifact;
+String CityName;
+Travel(int PlayerMedical,int PlayerWeapon,int PlayerFood,int PlayerMen,
+       int PlayerJewelry,int PlayerGold,boolean artifact,String CityName){
+    //this();
+    this.PlayerMedical = PlayerMedical;
+    this.PlayerWeapon = PlayerWeapon;
+    this.PlayerMen = PlayerMen;
+    this.PlayerJewelry = PlayerJewelry;
+    this.PlayerGold = PlayerGold;
+    this.artifact = artifact;
+    switch(CityName){
+        case "Drylagoon" : TravelingToDrylagoon(); break;
+        case "Redapple" : TravelingToRedapple(); break;
+    }
+}
+
+Travel(){
+    System.out.println("Traveling to "+CityName);
+}
+
+void TravelingToDrylagoon(){
+    System.out.println("Approaching bandit");
+    if(PlayerGold>=1000){
+        System.out.println("The bandit has leave");
+        PlayerGold = PlayerGold - 1000;
+        System.out.println("Now you have "+PlayerGold+" gold");
+    }else{
+        if(PlayerWeapon>=15){
+            System.out.println("fight");
+            PlayerWeapon = PlayerWeapon - 15;
+            System.out.println("Now you have "+PlayerWeapon+" weapon");
+                    if(PlayerMedical>=10){
+                        PlayerMedical = PlayerMedical - 10;
+                        System.out.println("Now you have have "+PlayerMedical+" medical");
+                    }else{
+                    PlayerMen = 0;
+                    System.out.println("You lose all your men");
+                    }
+        }else{
+            if(PlayerMen>=15){
+                System.out.println("dead");
+                PlayerMen = PlayerMen - 15;
+                System.out.println("Now you have "+PlayerMen+" men");
+            }else{
+                System.out.println("fuk up");
+                System.out.println("You lose all Gold, Jewelry, Men, Weapon");
+                PlayerGold = 0;
+                PlayerJewelry = 0;
+                PlayerMen = 0;
+                PlayerWeapon = 0;
+            }
+        }
+    }
+    
+}
+void TravelingToRedapple(){
+    if(artifact){
+        System.out.println("to city");
+    }else{
+        System.out.println("Approaching souless monster");
+        if(PlayerWeapon>=20){
+        System.out.println("fight");
+        PlayerWeapon = PlayerWeapon - 20;
+        System.out.println("Now you have "+PlayerWeapon+" weapon");
+                    if(PlayerMedical>=10){
+                        PlayerMedical = PlayerMedical - 10;
+                        System.out.println("Now you have "+PlayerMedical+" medical");
+                    }else{
+                    PlayerMen = 0;
+                    System.out.println("You lose all your men");
+                    }
+        }else{
+            if(PlayerMen>=20){
+            System.out.println("dead");
+            PlayerMen = PlayerMen - 20;
+            System.out.println("Now you have "+PlayerMen+" men");
+            }else{
+                System.out.println("fuk up");
+                System.out.println("You lose all Weapon, Men, Food, Medical");
+                PlayerWeapon = 0;
+                PlayerMen = 0;
+                PlayerFood = 0;
+                PlayerMedical = 0;
+            }
+        }
+    }
+}
 //ในการเรียนกใช้คลาสนี้ ต้องส่งพารามิเตอร์ที่จำเป็นมาเห็บไว้ในตัวแปรของคลาสนี้ ได้แก่ 
 //Medical,Weapon,Food,Men,Jewelry,Gold,artifact[0] และ ค่าString ที่บอกว่าเดินทางไปเมืองไหน
     

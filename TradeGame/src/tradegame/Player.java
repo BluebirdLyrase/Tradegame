@@ -11,13 +11,13 @@ package tradegame;
  */
 public class Player extends Scan {
     
-    private int Alcohol = 7000 ;
-    private int Medical = 1000 ;
-    private int Weapon = 2000  ;
-    private int Food = 3000  ;
-    private int Men = 5000;
-    private int Jewelry = 4000  ;
-    private int Gold = 6000 ;
+    private int Alcohol = 5 ;
+    private int Medical = 10 ;
+    private int Weapon = 10  ;
+    private int Food = 10  ;
+    private int Men = 0;
+    private int Jewelry = 10  ;
+    private int Gold = 5000 ;
     private boolean[] Artifact = {false,false,false};
     private String[] ArtifactName ={"-Waterflake Ancient Necklace","-Secret Magic Knowledge","-Dragon's egg"};
     private String[] ShowInventoryName = {"Gold     ","Medical  ","Weapon   ","Food     ","Jewelry  ","Manpower      ","Moonshine"};
