@@ -26,13 +26,15 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
             + "\n(2) -DRINKING"
             + "\n(3) -PROMOTION-"
             + "\n(4) -TRADE-"
+            + "\n(5) -EXPLOR-"
             + "\n(5) I need to go.");
-            switch(ScannerSwitch(5)){
+            switch(ScannerSwitch(6)){
                 case 1 : Asking(); break;
                 case 2 : Drinking(); break;
                 case 3 : Promotion(); break;
                 case 4 : Trade(); break;
-                case 5 : break;
+                case 5 : Explor(); break;
+                case 6 : break;
             }
     } 
     void Asking(){

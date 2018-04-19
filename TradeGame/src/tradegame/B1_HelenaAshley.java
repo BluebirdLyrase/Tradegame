@@ -75,9 +75,9 @@ public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
     }
     public void Explor(){
         
-        System.out.println("Helena: I will help you find that grimoire."
-                         + "\n(1) yes, thank you."
-                         + "\n(2) not my problem.");
+        System.out.println("Helena: I gonna go and find that grimoire, you want to join ?"
+                         + "\n(1) yes, sure."
+                         + "\n(2) no thank you.");
         
     switch(ScannerSwitch(2)){
         case 1 : FindingGrimoire(); break ;

@@ -20,7 +20,7 @@ public class Player extends Scan {
     private int Gold = 5000 ;
     private boolean[] Artifact = {false,false,false};
     private String[] ArtifactName ={"-Waterflake Ancient Necklace","-Secret Magic Knowledge","-Dragon's egg"};
-    private String[] ShowInventoryName = {"Gold     ","Medical  ","Weapon   ","Food     ","Jewelry  ","Manpower      ","Moonshine"};
+    private String[] ShowInventoryName = {"Gold     ","Medical  ","Weapon   ","Food     ","Jewelry  ","Men      ","Moonshine"};
     public boolean[] report = {false,false};
     //[0] Mick
     //[1] Blue

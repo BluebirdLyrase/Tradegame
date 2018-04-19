@@ -89,10 +89,10 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
      
     
      void Buymoonshine(){
-    System.out.println("1 bottle of moonshrine for "+Alcoholprice+" gold");          
+    System.out.println("1 bottle of moonshine for "+Alcoholprice+" gold");          
     System.out.println("Rose: How many men do you want handsome?");    
     do{   
-    System.out.println("moonshrine Quantity>>>");
+    System.out.println("moonshine Quantity>>>");
     Quantity=ScannerTrade(); //for Scan amount of goods player want to Buy
     if(Quantity==0)System.out.println("Rose: Look like you dont want to be drunk haha."); //if player type 0 amount of goods 
     TotalPrice = Quantity*Alcoholprice; // to set amount of player's gold that will be use in GoldSetter(-)
