@@ -1,4 +1,3 @@
-
 package tradegame;
 
 public class C2_FoxPocketwatch extends CityRedapple implements Guardian {
@@ -78,4 +77,4 @@ public class C2_FoxPocketwatch extends CityRedapple implements Guardian {
     }
     Greeting();
     }
-}
+}//80

@@ -1,14 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tradegame;
-
-/**
- *
- * @author 6030213005
- */
 public class Player extends Scan {
     
     private int Alcohol = 5 ;
@@ -19,8 +9,10 @@ public class Player extends Scan {
     private int Jewelry = 10  ;
     private int Gold = 5000 ;
     private boolean[] Artifact = {false,false,false};
-    private String[] ArtifactName ={"-Waterflake Ancient Necklace","-Secret Magic Knowledge","-Dragon's egg"};
-    private String[] ShowInventoryName = {"Gold     ","Medical  ","Weapon   ","Food     ","Jewelry  ","Men      ","Moonshine"};
+    private String[] ArtifactName ={"-Waterflake Ancient Necklace",
+    "-Secret Magic Knowledge","-Dragon's egg"};
+    private String[] ShowInventoryName = {"Gold     ","Medical  ","Weapon   ",
+        "Food     ","Jewelry  ","Men      ","Moonshine"};
     public boolean[] report = {false,false};
     //[0] Mick
     //[1] Blue
@@ -139,7 +131,5 @@ public class Player extends Scan {
                         }
             }
          }
-    }
-    
-    
-}
+    } 
+}//135

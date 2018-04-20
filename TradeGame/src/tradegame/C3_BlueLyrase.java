@@ -102,14 +102,14 @@ boolean report;
     }
     public void Trade(){
     System.out.println("[Your Gold : "+PlayerGold+" ]");    
-    System.out.println("(1) I want to buy some food(1/"+FoodPrice+"gold)"
-            + "\n(2) I want to buy some jewelry(1/"+JewelryPrice+"gold)"
-            + "\n(3) I want to buy some medical supply(1/"+MedicalPrice+"gold)"   
-            + "\n(4) I want to buy some weapon supply(1/"+WeaponPrice+"gold)"  
-            + "\n(5) I want to sell some Food(1/"+(FoodPrice/2)+"gold),[You have:"+PlayerFood+" Food]"
-            + "\n(6) I want to sell some Jewelry(1/"+(JewelryPrice/2)+"gold),[You have:"+PlayerJewelry+" Jewelry]"
-            + "\n(7) I want to sell some medical(1/"+(MedicalPrice/2)+"gold),[You have:"+PlayerMedical+" Medical]"
-            + "\n(8) I want to sell some weapon(1/"+(WeaponPrice/2)+"gold),[You have:"+PlayerWeapon+" Weapon]"      
+    System.out.println("(1) I want to buy some food(1/"+super.FoodPrice+"gold)"
+            + "\n(2) I want to buy some jewelry(1/"+super.JewelryPrice+"gold)"
+            + "\n(3) I want to buy some medical supply(1/"+super.MedicalPrice+"gold)"   
+            + "\n(4) I want to buy some weapon supply(1/"+super.WeaponPrice+"gold)"  
+            + "\n(5) I want to sell some Food(1/"+(super.FoodPrice/2)+"gold),[You have:"+PlayerFood+" Food]"
+            + "\n(6) I want to sell some Jewelry(1/"+(super.JewelryPrice/2)+"gold),[You have:"+PlayerJewelry+" Jewelry]"
+            + "\n(7) I want to sell some medical(1/"+(super.MedicalPrice/2)+"gold),[You have:"+PlayerMedical+" Medical]"
+            + "\n(8) I want to sell some weapon(1/"+(super.WeaponPrice/2)+"gold),[You have:"+PlayerWeapon+" Weapon]"      
             + "\n(9) Let talk about something else");
             switch(ScannerSwitch(9)){
                 case 1 : PlayerBuying("Food",super.FoodPrice);
@@ -124,7 +124,7 @@ boolean report;
                          PlayerMedical = QuantitySetter("+",PlayerMedical);
                          Show("Medical",PlayerMedical);
                          Trade(); break;
-                case 4 : PlayerBuying("Weapon",this.WeaponPrice);
+                case 4 : PlayerBuying("Weapon",super.WeaponPrice);
                          PlayerWeapon = QuantitySetter("+",PlayerWeapon);
                          Show("Weapon",PlayerWeapon);
                          Trade(); break;
@@ -182,17 +182,17 @@ boolean report;
     do{   
     System.out.println("Men Quantity>>>");
     Quantity=ScannerTrade(); //for Scan amount of goods player want to Buy
-    if(Quantity==0)System.out.println("Blue: Look like you don't want any slave."); //if player type 0 amount of goods 
-    TotalPrice = Quantity*Manprice; // to set amount of player's gold that will be use in GoldSetter(-)
-    if(TotalPrice>PlayerGold){//Happening when player type more amount of Good then he can afford it 
+    if(Quantity==0)System.out.println("Blue: Look like you don't want any slave.");
+    TotalPrice = Quantity*Manprice; // will be use in GoldSetter(-)
+    if(TotalPrice>PlayerGold){//type more amount of Good then he can afford it 
     System.out.println("Blue: Sorry, that is not enough gold to hire "+Quantity+" amount of men. "
               + "\n you may change that number or go away.");
     }
     }while(TotalPrice>PlayerGold);
-    GoldSetter("-");//Goldsetter will use variable in this class by itself - mean to decresed player gold that setgold() mean to set new amount of player gold
+    GoldSetter("-");// - mean to decresed 
     Show("Gold",PlayerGold);//show player gold
     PlayerMen = QuantitySetter("+",PlayerMen);
     Show("Men",PlayerMen);
     Promotion();
     }
-}
+}//198

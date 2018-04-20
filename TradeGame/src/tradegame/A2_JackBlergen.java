@@ -13,7 +13,7 @@ public class A2_JackBlergen extends CityWaterflake implements Explorer {
             PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);
     this.drinking = drinking;
     this.FreeWeaponGave = FreeWeaponGave ;
-    System.out.println("[Person:Jack Blergen]");
+    System.out.println("[NPC:Jack Blergen]");
     System.out.println("Jack: ....");
     Greeting();
     System.out.println("...");
@@ -106,6 +106,4 @@ public class A2_JackBlergen extends CityWaterflake implements Explorer {
                 case 2 : System.out.println("So, what now ?"); Greeting(); break;
             }
     }
-    //Form Waterflake
-    //He is Explors
-}
+}//109

@@ -1,4 +1,3 @@
-
 package tradegame;
 public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
     A3_PriscillaRose(int PlayerMedical,int PlayerWeapon,int PlayerFood,int PlayerJewelry
@@ -6,7 +5,7 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
     super(PlayerMedical,PlayerWeapon,PlayerFood,
           PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);   
     this.drinking = drinking ;
-    System.out.println("[Npc:Priscilla Rose]"); ///////this constructor will have been called 3rd 
+    System.out.println("[Npc:Priscilla Rose]"); 
     System.out.println("Rose: Welcome to Heartwarming inn."); 
     Greeting();
     System.out.println("Rose: See you soon.");
@@ -73,14 +72,14 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
     do{   
     System.out.println("Men Quantity>>>");
     Quantity=ScannerTrade(); //for Scan amount of goods player want to Buy
-    if(Quantity==0)System.out.println("Rose: Look like you don't want to hire men around here."); //if player type 0 amount of goods 
+    if(Quantity==0)System.out.println("Rose: Look like you don't want to hire men around here."); //0 amount of goods 
     TotalPrice = Quantity*Manprice; // to set amount of player's gold that will be use in GoldSetter(-)
     if(TotalPrice>PlayerGold){//Happening when player type more amount of Good then he can afford it 
     System.out.println("Rose: Sorry, that is not enough gold to hire "+Quantity+" amount of men. "
               + "\n you may change that number.");
     }
     }while(TotalPrice>PlayerGold);
-    GoldSetter("-");//Goldsetter will use variable in this class by itself - mean to decresed player gold that setgold() mean to set new amount of player gold
+    GoldSetter("-");// - mean to decresed player gold 
     Show("Gold",PlayerGold);//show player gold
     PlayerMen = QuantitySetter("+",PlayerMen);
     Show("Men",PlayerMen);
@@ -101,7 +100,7 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
               + "\n you may drink less than that.");
     }
     }while(TotalPrice>PlayerGold);
-    GoldSetter("-");//Goldsetter will use variable in this class by itself - mean to decresed player gold that setgold() mean to set new amount of player gold
+    GoldSetter("-");// - mean to decresed player gold 
     Show("Gold",PlayerGold);//show player gold         
     PlayerAlcohol = QuantitySetter("+",PlayerAlcohol); 
     Show("Moonshine",PlayerAlcohol); 
@@ -122,4 +121,4 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
      //Alcohol to food
      //   1 ----->  10 food
      }
-}
+}//124

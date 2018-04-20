@@ -6,7 +6,6 @@ boolean artifact;
 String CityName;
 Travel(int PlayerMedical,int PlayerWeapon,int PlayerFood,int PlayerMen,
        int PlayerJewelry,int PlayerGold,boolean artifact,String CityName){
-    //this();
     this.PlayerMedical = PlayerMedical;
     this.PlayerWeapon = PlayerWeapon;
     this.PlayerFood = PlayerFood;
@@ -14,14 +13,11 @@ Travel(int PlayerMedical,int PlayerWeapon,int PlayerFood,int PlayerMen,
     this.PlayerJewelry = PlayerJewelry;
     this.PlayerGold = PlayerGold;
     this.artifact = artifact;
+    System.out.println("Traveling to "+CityName);
     switch(CityName){
         case "Drylagoon" : TravelingToDrylagoon(); break;
         case "Redapple" : TravelingToRedapple(); break;
     }
-}
-
-Travel(){
-    System.out.println("Traveling to "+CityName);
 }
 
 void TravelingToDrylagoon(){
@@ -94,5 +90,4 @@ void TravelingToRedapple(){
         }
     }
 }
-    
-}//class travel
+}//class travel 93

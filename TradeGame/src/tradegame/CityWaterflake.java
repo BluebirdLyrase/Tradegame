@@ -1,4 +1,3 @@
-
 package tradegame;
 
 abstract class CityWaterflake extends City {
@@ -13,14 +12,12 @@ CityWaterflake(int PlayerMedical,int PlayerWeapon,int PlayerFood,
     this.PlayerGold = PlayerGold;
     this.PlayerAlcohol = PlayerAlcohol;
 }
-
 abstract  void FreeTrade();
 
 int QuantityTrade(String check,int PlayerQuantity,int HowMany){
     if(check.equals("+")) return  PlayerQuantity + HowMany;
     else return PlayerQuantity-HowMany;
     }
-
 public void PlayerTrading(String WhatYouGive,int HowManyYouGet,int HowManyYouHave){
     System.out.println("1 "+WhatYouGive+" for "+HowManyYouGet+" food"); 
     System.out.println("How many do you want to trade"); 
@@ -36,4 +33,4 @@ public void PlayerTrading(String WhatYouGive,int HowManyYouGet,int HowManyYouHav
     PlayerFood = QuantityTrade("+",PlayerFood,HowManyYouGet*Quantity);
     Show("Food",PlayerFood);//show player Food
     }
-}
+}//36

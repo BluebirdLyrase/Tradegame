@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tradegame;
 public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
     boolean Knowledge ;
@@ -96,5 +91,4 @@ public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
         System.out.println("'You have learned the secret magic'");
         if(PlayerMagic[0])Knowledge = true ;
     }
-    
-}
+}//94

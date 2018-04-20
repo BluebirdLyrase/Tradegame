@@ -53,9 +53,4 @@ abstract class City extends Scan {
                 + "\nMoonshine:"+PlayerAlcohol);
         System.out.println("----------------------------------------------------");
     }
-    
-    
-    
-    
-
-}
+}//56

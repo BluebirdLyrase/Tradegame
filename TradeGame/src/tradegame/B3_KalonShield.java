@@ -1,4 +1,3 @@
-
 package tradegame;
 public class B3_KalonShield extends CityDrylagoon implements Guardian  {
     boolean report,reported;
@@ -77,6 +76,4 @@ public class B3_KalonShield extends CityDrylagoon implements Guardian  {
     }   
     Greeting();
     }
-    //report about Micker want to murder Helena
-    //report about Helena have Life Magic mutent potion 
-}
+}//79

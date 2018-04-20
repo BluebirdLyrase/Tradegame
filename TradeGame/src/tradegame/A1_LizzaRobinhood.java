@@ -1,6 +1,4 @@
 package tradegame;
-
-
 public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
     int FoodPrice = 2;
     int JewelryPrice = 50;
@@ -8,7 +6,7 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
                       int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol){    
     super(PlayerMedical,PlayerWeapon,PlayerFood,
           PlayerJewelry,PlayerMen,PlayerGold,PlayerAlcohol);
-    System.out.println("[Person:Lizza Robinhood]");
+    System.out.println("[NPC:Lizza Robinhood]");
     System.out.println("Lizza: Welcome to Lizza Good store What can I help you?"); 
     Greeting();
     System.out.println("Lizza: See you around.");
@@ -45,7 +43,8 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
             + "\nThere is rumour that some artifacts buried under the Waterflake river await to be discovered"); 
     Asking();
     break ;
-    case 2 : System.out.println("Lizza : I dont know much about Drylagoon but I have heard that everyone in Drylagoon can cast a spell ");
+    case 2 : System.out.println("Lizza : I dont know much about Drylagoon but I have "
+            + "heard that everyone in Drylagoon can cast a spell ");
     Asking();
     break ;
     case 3 : System.out.println("Lizza: If you ask me where is the largest and most beautiful village I ever visited."
@@ -170,7 +169,7 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
               + "\n you may change the quantity of "+WhatIsIt);
     }
     }while(TotalPrice>PlayerGold);
-    GoldSetter("-");//Goldsetter will use variable in this class by itself - mean to decresed player gold that setgold() mean to set new amount of player gold
+    GoldSetter("-");// - mean to decresed player gold that setgold() mean to set new amount of player gold
     Show("Gold",PlayerGold);//show player gold
     }
     public void PlayerSelling(String WhatIsIt,int HowMuch,int HowManyYouHave){
@@ -179,14 +178,14 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
     do{
     System.out.println(WhatIsIt+" Quantity>>>");
     Quantity=ScannerTrade(); //for Scan amount of goods player want to sell
-    if(Quantity==0)System.out.println("Lizza: I see that you dont really want to sell "+WhatIsIt+".");//if player type 0 amount of goods 
+    if(Quantity==0)System.out.println("Lizza: I see that you dont really want to sell "+WhatIsIt+".");//0 amount of goods 
     TotalPrice = Quantity*HowMuch; //to set  amount of player's gold that will be use in GoldSetter(+)
     if(Quantity>HowManyYouHave){//Happening when player type more amount of Good then he have
     System.out.println("Lizza: Sorry, but look like you have only "+WhatIsIt+" to sell. "
             + "\n you may change the quantity of "+WhatIsIt+".");
     }
     }while(Quantity>HowManyYouHave);
-    GoldSetter("+");//Goldsetter will use variable in this class by itself + mean to incresed player gold that setgold() mean to set new amount of player gold 
+    GoldSetter("+");//+ increse
     Show("Gold",PlayerGold);//show player gold
     }
-    }
+    }//191

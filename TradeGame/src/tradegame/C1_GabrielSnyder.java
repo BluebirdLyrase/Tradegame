@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tradegame;
 public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer {
     boolean MagicRequirtoExplor,Dragonegg ;
@@ -92,10 +87,7 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
             + "\n(2) I want to buy some jewelry(1/"+JewelryPrice+"gold)"
             + "\n(3) I want to buy some medical supply(1/"+MedicalPrice+"gold)"   
             + "\n(4) I want to buy some weapon supply(1/"+WeaponPrice+"gold)"  
-            //+ "\n(5) I want to sell some Food(1/"+(FoodPrice/2)+"gold),[You have:"+PlayerFood+" Food]"
-            + "\n(5) I want to sell some Jewelry(1/"+(JewelryPrice/2)+"gold),[You have:"+PlayerJewelry+" Jewelry]"
-            //+ "\n(7) I want to sell some medical(1/"+(MedicalPrice/2)+"gold),[You have:"+PlayerMedical+" Medical]"
-            //+ "\n(8) I want to sell some weapon(1/"+(WeaponPrice/2)+"gold),[You have:"+PlayerWeapon+" Weapon]"      
+            + "\n(5) I want to sell some Jewelry(1/"+(JewelryPrice/2)+"gold),[You have:"+PlayerJewelry+" Jewelry]"    
             + "\n(6) Let talk about something else");
             switch(ScannerSwitch(6)){
             ////PLAYER BUYING
@@ -166,4 +158,4 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
         System.out.println("You found nothing in the forest.");
         }
     }
-}
+}//161

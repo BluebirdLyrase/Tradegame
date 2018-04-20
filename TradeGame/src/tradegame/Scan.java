@@ -1,4 +1,3 @@
- 
 package tradegame;
 import java.util.Scanner;
 public class Scan {
@@ -44,6 +43,6 @@ public class Scan {
     }
     }
 
-}
+}//46
     
 

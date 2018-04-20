@@ -1,5 +1,3 @@
-
-
 package tradegame;
 abstract class CityRedapple extends City {
     
@@ -28,7 +26,5 @@ abstract class CityRedapple extends City {
     GoldSetter("-");
     Show("Gold",PlayerGold);
     }
-
-//merchant of Redapple have a promotion for buy goods with correct quentity
 abstract void  Promotion();    
-}
+}//30

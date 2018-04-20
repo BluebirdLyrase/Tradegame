@@ -1,10 +1,8 @@
-
 package tradegame;
 
 public class B2_MickerGorn extends CityDrylagoon implements Merchant {
     boolean report;
     int WeaponPrice = 5;
-    //he will ask you to kill helena when he drink with you by posion her while drinking
     B2_MickerGorn (int PlayerMedical,int PlayerWeapon,int PlayerFood,
                       int PlayerJewelry,int PlayerMen,int PlayerGold,int PlayerAlcohol,
                       boolean drinking,boolean PlayerMagic0,boolean  PlayerMagic1,boolean report){    
@@ -161,4 +159,4 @@ public class B2_MickerGorn extends CityDrylagoon implements Merchant {
     GoldSetter("-");
     Show("Gold",PlayerGold);
     }
-}
+}//162
