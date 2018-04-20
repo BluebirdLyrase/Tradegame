@@ -64,7 +64,7 @@ public class C2_FoxPocketwatch extends CityRedapple implements Guardian {
                 if(reported){
                     System.out.println("Already report");
                 }else{
-                    System.out.println("You have report about the Black merchant");
+                    System.out.println("You have report about the Black merchant(reward 1000 gold)");
                     PlayerGold = PlayerGold + 1000;
                     Show("Gold",PlayerGold);
                     reported = true;

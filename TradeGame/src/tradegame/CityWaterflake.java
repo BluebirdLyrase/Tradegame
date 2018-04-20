@@ -11,6 +11,7 @@ CityWaterflake(int PlayerMedical,int PlayerWeapon,int PlayerFood,
     this.PlayerMen = PlayerMen ;
     this.PlayerGold = PlayerGold;
     this.PlayerAlcohol = PlayerAlcohol;
+    ShowInventory();
 }
 abstract  void FreeTrade();
 

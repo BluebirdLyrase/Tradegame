@@ -17,7 +17,7 @@ public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
     void Greeting(){
     System.out.println("(1) -ASKING-"
             + "\n(2) -DRINKING-"
-            + "\n(3) -MAGIC TEACH-"
+            + "\n(3) -MAGIC TEACH(Basic)-"
             + "\n(4) I need to go.");
             switch(ScannerSwitch(4)){
                 case 1 : Asking(); break;
@@ -62,8 +62,9 @@ public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
     Greeting();
     }
     void MagicTeach(){
-    if(PlayerMagic[0]){System.out.println("learn lewl");
+    if(PlayerMagic[0]){System.out.println("already learn");
     }else{
+     System.out.println("You have learn basic magic");   
     PlayerMagic[0] = true ;
     }
     Greeting();

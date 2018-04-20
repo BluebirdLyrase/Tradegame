@@ -3,9 +3,9 @@ public class Travel {
     
 int PlayerMedical,PlayerWeapon,PlayerFood,PlayerMen,PlayerJewelry,PlayerGold;
 boolean artifact;
-String CityName;
-Travel(int PlayerMedical,int PlayerWeapon,int PlayerFood,int PlayerMen,
-       int PlayerJewelry,int PlayerGold,boolean artifact,String CityName){
+public String CityName;
+Travel(int PlayerMedical,int PlayerWeapon,int PlayerFood,int PlayerJewelry,
+       int PlayerMen,int PlayerGold,boolean artifact,String CityName){
     this.PlayerMedical = PlayerMedical;
     this.PlayerWeapon = PlayerWeapon;
     this.PlayerFood = PlayerFood;
@@ -16,11 +16,12 @@ Travel(int PlayerMedical,int PlayerWeapon,int PlayerFood,int PlayerMen,
     System.out.println("Traveling to "+CityName);
     switch(CityName){
         case "Drylagoon" : TravelingToDrylagoon(); break;
+        
         case "Redapple" : TravelingToRedapple(); break;
     }
 }
 
-void TravelingToDrylagoon(){
+ private void TravelingToDrylagoon(){
     System.out.println("Approaching bandit");
     if(PlayerGold>=1000){
         System.out.println("You have lost 1000 Gold");
@@ -57,7 +58,7 @@ void TravelingToDrylagoon(){
     }
     
 }
-void TravelingToRedapple(){
+private void TravelingToRedapple(){
     if(artifact){
         System.out.println("You traveling with out any trouble");
     }else{

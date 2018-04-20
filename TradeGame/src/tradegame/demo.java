@@ -4,18 +4,18 @@ public class demo {
     static Player player = new Player();
     public static void main(String args[]){ 
         System.out.println("[CommonEnding:End the game with 5000 gold]");
-        System.out.println("[BadEnding:End the game with Blow 5000 gold]");
+        System.out.println("[BadEnding:End the game with Below 5000 gold]");
         System.out.println("[TruenEnding:End the game with all artifact]");
         Waterflake();
         Travel t = new Travel(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
                               player.getMen(),player.getGold(),player.getArtifact(0),"Drylagoon");
         player.setPlayerInventory(t.PlayerMedical,t.PlayerWeapon,t.PlayerFood,
-                                                     t.PlayerMen,t.PlayerJewelry,t.PlayerGold,player.getAlcohol());
+                                  t.PlayerMen,t.PlayerJewelry,t.PlayerGold,player.getAlcohol());
         Drylagoon();
         Travel t2 = new Travel(player.getMedical(),player.getWeapon(),player.getFood(),player.getJewelry(),
                player.getMen(),player.getGold(),player.getArtifact(0),"Redapple");
         player.setPlayerInventory(t2.PlayerMedical,t2.PlayerWeapon,t2.PlayerFood,
-                                                     t2.PlayerMen,t2.PlayerJewelry,t2.PlayerGold,player.getAlcohol());
+                                  t2.PlayerMen,t2.PlayerJewelry,t2.PlayerGold,player.getAlcohol());
         Redapple();
         boolean JokeEnding = player.drunk[0]&&player.drunk[1]&&player.drunk[2]&&
                              player.drunk[3]&&player.drunk[4]&&player.drunk[5];
@@ -72,8 +72,7 @@ player.getJewelry(),player.getMen(),player.getGold(),player.getAlcohol());
                         Waterflake();
                         break;
                     ////////////////////////////////////////////////////////////////////////////////////////////////////
-                    case 4 :
-                    System.out.println("Traveling to Drylagoon");    
+                    case 4 :  
                         break;  
         }//switch              
     }//medthod wtf

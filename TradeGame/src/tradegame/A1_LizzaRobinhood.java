@@ -12,7 +12,6 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
     System.out.println("Lizza: See you around.");
     }
     void Greeting(){
-    ShowInventory();//////////////////////////////////////////////////////////////////////////////////////////////////////////    
     System.out.println("(1) Can I ask you something ?"
             + "\n(2) How about a drink ?"
             + "\n(3) Let me see your wares."

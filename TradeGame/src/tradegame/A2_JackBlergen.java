@@ -3,7 +3,7 @@ package tradegame;
 public class A2_JackBlergen extends CityWaterflake implements Explorer {
     boolean FreeWeaponGave = false ;
     int WeaponPrice = 5;
-    int ExplorCost = 4000 ;
+    int ExplorCost = 400 ;
     boolean Necklace = false;
     A2_JackBlergen(int PlayerMedical, int PlayerWeapon, int PlayerFood,
                     int PlayerJewelry, int PlayerMen, int PlayerGold , int PlayerAlcohol

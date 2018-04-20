@@ -22,7 +22,7 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
             + "\n(3) -PROMOTION-"
             + "\n(4) -TRADE-"
             + "\n(5) I want ho hunt the dragon with you"
-            + "\n(5) I need to go.");
+            + "\n(6) I need to go.");
             switch(ScannerSwitch(6)){
                 case 1 : Asking(); break;
                 case 2 : Drinking(); break;

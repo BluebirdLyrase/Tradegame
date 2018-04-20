@@ -10,6 +10,7 @@ abstract class CityDrylagoon extends City {
     this.PlayerMen = PlayerMen ;
     this.PlayerGold = PlayerGold;
     this.PlayerAlcohol = PlayerAlcohol;
+    ShowInventory();
 }
 abstract void  MagicTeach();    
 }//15

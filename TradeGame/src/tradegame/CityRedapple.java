@@ -10,6 +10,7 @@ abstract class CityRedapple extends City {
     this.PlayerMen = PlayerMen ;
     this.PlayerGold = PlayerGold;
     this.PlayerAlcohol = PlayerAlcohol;
+    ShowInventory();
 }
     
     public void PlayerPromotion(String WhatIsIt,int HowMuch,String NpcName){

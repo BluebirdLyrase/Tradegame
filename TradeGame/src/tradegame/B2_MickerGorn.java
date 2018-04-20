@@ -22,7 +22,7 @@ public class B2_MickerGorn extends CityDrylagoon implements Merchant {
     void Greeting(){
     System.out.println("(1) -ASKING-"
             + "\n(2) -DRINKING-"
-            + "\n(3) -MAGIC TEACH-"
+            + "\n(3) -MAGIC TEACH(Light)-"
             + "\n(4) -TRADE-"
             + "\n(5) I need to go.");
             switch(ScannerSwitch(5)){
@@ -73,13 +73,14 @@ public class B2_MickerGorn extends CityDrylagoon implements Merchant {
         
     if(PlayerMagic[0]){
         if(PlayerMagic[1]){      
-            System.out.println("WTF do u want ?");
+            System.out.println("already learn");
         }else{
+            System.out.println("you have learn light magic");
             PlayerMagic[1] = true ;
         }
     
     }else{
-    System.out.println("Go learn Basic pai pai");
+    System.out.println("Micker: You need to learn basic magic first ");
     }
     Greeting();
     }

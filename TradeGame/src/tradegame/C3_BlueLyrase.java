@@ -105,13 +105,9 @@ boolean report;
     System.out.println("(1) I want to buy some food(1/"+super.FoodPrice+"gold)"
             + "\n(2) I want to buy some jewelry(1/"+super.JewelryPrice+"gold)"
             + "\n(3) I want to buy some medical supply(1/"+super.MedicalPrice+"gold)"   
-            + "\n(4) I want to buy some weapon supply(1/"+super.WeaponPrice+"gold)"  
-            + "\n(5) I want to sell some Food(1/"+(super.FoodPrice/2)+"gold),[You have:"+PlayerFood+" Food]"
-            + "\n(6) I want to sell some Jewelry(1/"+(super.JewelryPrice/2)+"gold),[You have:"+PlayerJewelry+" Jewelry]"
-            + "\n(7) I want to sell some medical(1/"+(super.MedicalPrice/2)+"gold),[You have:"+PlayerMedical+" Medical]"
-            + "\n(8) I want to sell some weapon(1/"+(super.WeaponPrice/2)+"gold),[You have:"+PlayerWeapon+" Weapon]"      
-            + "\n(9) Let talk about something else");
-            switch(ScannerSwitch(9)){
+            + "\n(4) I want to buy some weapon supply(1/"+super.WeaponPrice+"gold)"      
+            + "\n(5) Let talk about something else");
+            switch(ScannerSwitch(5)){
                 case 1 : PlayerBuying("Food",super.FoodPrice);
                          PlayerFood = QuantitySetter("+",PlayerFood);
                          Show("Food",PlayerFood);
@@ -127,24 +123,8 @@ boolean report;
                 case 4 : PlayerBuying("Weapon",super.WeaponPrice);
                          PlayerWeapon = QuantitySetter("+",PlayerWeapon);
                          Show("Weapon",PlayerWeapon);
-                         Trade(); break;
-                case 5 : PlayerSelling("Food",(super.FoodPrice/2),PlayerFood);
-                         PlayerFood = QuantitySetter("-",PlayerFood);
-                         Show("Food",PlayerFood);
-                         Trade(); break;
-                case 6 : PlayerSelling("Jewelry",(super.JewelryPrice/2),PlayerJewelry);
-                         PlayerJewelry = QuantitySetter("-",PlayerJewelry);
-                         Show("Jewelry",PlayerJewelry);
-                         Trade(); break;
-                case 7 : PlayerSelling("Medical",(super.MedicalPrice/2),PlayerMedical);
-                         PlayerMedical = QuantitySetter("-",PlayerMedical);
-                         Show("Medical",PlayerMedical);
-                         Trade(); break;
-                case 8 : PlayerSelling("Weapon",(super.WeaponPrice/2),PlayerWeapon);
-                         PlayerWeapon = QuantitySetter("-",PlayerWeapon);
-                         Show("Weapon",PlayerWeapon);
-                         Trade(); break;
-                case 9 : System.out.println("Blue: -GREET2-");
+                         Trade(); break; 
+                case 5 : System.out.println("Blue: -GREET2-");
                          Greeting(); break;
             }
     }
