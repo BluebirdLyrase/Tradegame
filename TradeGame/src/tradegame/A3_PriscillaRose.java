@@ -12,7 +12,7 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
     }
     
     
-    void Greeting(){ShowInventory();
+    void Greeting(){
             System.out.println("(1) Can I ask you something ?"
             + "\n(2) How about a drink ?"
             + "\n(3) I want a room to rest"
