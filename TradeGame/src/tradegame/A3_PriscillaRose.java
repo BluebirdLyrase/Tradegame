@@ -119,7 +119,5 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
         case 2 : System.out.println("What can I help you ?");
                  Greeting(); break;
     }
-     //Alcohol to food
-     //   1 ----->  10 food
      }
-}//124
+}//123

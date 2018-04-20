@@ -187,4 +187,4 @@ public class A1_LizzaRobinhood extends CityWaterflake implements Merchant{
     GoldSetter("+");//+ increse
     Show("Gold",PlayerGold);//show player gold
     }
-    }//191
+    }//190

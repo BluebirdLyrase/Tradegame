@@ -128,7 +128,10 @@ boolean report;
                          Greeting(); break;
             }
     }
-    //Everything same as Gabriel but he buy everything
+    public void PlayerSelling(String WhatIsIt,int HowMuch,int Howmany){
+    //He does not buy anything form player
+    }
+    
     public void PlayerBuying(String WhatIsIt,int HowMuch){
     System.out.println("1 "+WhatIsIt+" for "+HowMuch+" gold");          
     System.out.println("Blue: -TRADE1-");
@@ -143,19 +146,6 @@ boolean report;
     }while(TotalPrice>PlayerGold);
     GoldSetter("-");
     Show("Gold",PlayerGold);
-    }
-    public void PlayerSelling(String WhatIsIt,int HowMuch, int HowManyYouHave){
-    System.out.println("1 "+WhatIsIt+" for "+HowMuch+" gold"); 
-    System.out.println("Blue: -TRADE4-");
-    do{
-    System.out.println(WhatIsIt+" Quantity>>>");
-    Quantity = ScannerTrade();
-    if(Quantity==0)System.out.println("Blue: -TRADE5-");
-    TotalPrice = Quantity*HowMuch;
-    if(Quantity>HowManyYouHave){
-    System.out.println("Blue: -TRADE6-");
-    }
-    }while(Quantity>HowManyYouHave);
     }
     public void HireMan(){
     System.out.println("Blue: How many slave do you want to buy?");    
@@ -175,4 +165,4 @@ boolean report;
     Show("Men",PlayerMen);
     Promotion();
     }
-}//198
+}//168

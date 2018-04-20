@@ -160,4 +160,4 @@ public class B2_MickerGorn extends CityDrylagoon implements Merchant {
     GoldSetter("-");
     Show("Gold",PlayerGold);
     }
-}//162
+}//163

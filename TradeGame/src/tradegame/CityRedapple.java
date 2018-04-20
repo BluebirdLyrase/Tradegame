@@ -28,4 +28,4 @@ abstract class CityRedapple extends City {
     Show("Gold",PlayerGold);
     }
 abstract void  Promotion();    
-}//30
+}//31

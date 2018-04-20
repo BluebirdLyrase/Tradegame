@@ -34,4 +34,4 @@ public void PlayerTrading(String WhatYouGive,int HowManyYouGet,int HowManyYouHav
     PlayerFood = QuantityTrade("+",PlayerFood,HowManyYouGet*Quantity);
     Show("Food",PlayerFood);//show player Food
     }
-}//36
+}//37

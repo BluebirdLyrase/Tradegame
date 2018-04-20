@@ -92,4 +92,4 @@ public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
         System.out.println("'You have learned the secret magic'");
         if(PlayerMagic[0])Knowledge = true ;
     }
-}//94
+}//95
