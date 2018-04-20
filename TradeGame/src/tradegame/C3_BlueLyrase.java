@@ -23,7 +23,7 @@ boolean report;
     void Greeting(){
     System.out.println("(1) -ASKING-"
             + "\n(2) -DRINKING-"
-            + "\n(3) -PROMOTION-"
+            + "\n(3) Black market"
             + "\n(4) -TRADE-"
             + "\n(5) I need to go.");
             switch(ScannerSwitch(5)){
@@ -70,6 +70,7 @@ boolean report;
     Greeting();
     }
     void Promotion(){
+    System.out.println("Blue : Just keep it under lock and key then let do our business");       
     System.out.println("[Your Gold : "+this.PlayerGold+" ]");    
     System.out.println("(1) I want to buy some food(1/"+this.FoodPrice+"gold)"
             + "\n(2) I want to buy some jewelry(1/"+this.JewelryPrice+"gold)"
@@ -192,6 +193,6 @@ boolean report;
     Show("Gold",PlayerGold);//show player gold
     PlayerMen = QuantitySetter("+",PlayerMen);
     Show("Men",PlayerMen);
-    Greeting();
+    Promotion();
     }
 }

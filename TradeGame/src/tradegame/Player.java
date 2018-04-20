@@ -138,11 +138,8 @@ public class Player extends Scan {
                             System.out.println("Bad Ending");
                         }
             }
-    
          }
-    
-    
-    
     }
+    
     
 }

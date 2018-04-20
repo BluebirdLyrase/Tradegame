@@ -55,7 +55,7 @@ public class A3_PriscillaRose extends CityWaterflake implements LaborBroker {
         System.out.println("-DRINKING1-");
         PlayerAlcohol--;
         if(ScannerDrinking(PlayerAlcohol)){
-            System.out.println("-DRINKING2-");
+            System.out.println("2 years ago there is a broken wizard who lived and dead near the river");
             PlayerAlcohol--;
                 if(ScannerDrinking(PlayerAlcohol)){
                 System.out.println("-DRINKING3");

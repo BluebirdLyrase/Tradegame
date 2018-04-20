@@ -62,7 +62,7 @@ public class B2_MickerGorn extends CityDrylagoon implements Merchant {
             System.out.println("-DRINKING2-");
             PlayerAlcohol--;
             if(ScannerDrinking(PlayerAlcohol)){
-                System.out.println("Micker: I kill Helena husbend");
+                System.out.println("Micker: I kill Helena husbend just for a couple of gold form somekind of rebel");
                 PlayerAlcohol--;
                 this.drinking = true ;
                 report = true ;

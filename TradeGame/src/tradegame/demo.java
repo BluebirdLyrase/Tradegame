@@ -21,6 +21,7 @@ public class demo {
                              player.drunk[3]&&player.drunk[4]&&player.drunk[5];
         boolean TrueEnding = player.getArtifact(0)&&player.getArtifact(1)&&player.getArtifact(2);
         player.Ending(JokeEnding,TrueEnding,player.getGold());
+        ThankYou xxx = new ThankYou();
         
     }
     

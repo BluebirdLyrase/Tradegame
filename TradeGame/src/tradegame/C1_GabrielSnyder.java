@@ -26,7 +26,7 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
             + "\n(2) -DRINKING"
             + "\n(3) -PROMOTION-"
             + "\n(4) -TRADE-"
-            + "\n(5) -EXPLOR-"
+            + "\n(5) I want ho hunt the dragon with you"
             + "\n(5) I need to go.");
             switch(ScannerSwitch(6)){
                 case 1 : Asking(); break;
@@ -157,9 +157,8 @@ public class C1_GabrielSnyder extends CityRedapple implements Merchant,Explorer 
     }
     public void Explor(){
         if(MagicRequirtoExplor){
-        System.out.println("found and Fight the dragon.");
-        System.out.println("You got dragon's egg.");
-        System.out.println("But the Monster Hunter dead.");
+        System.out.println("You found and Fight the dragon.");
+        System.out.println("You got dragon's egg, but the Monster Hunter dead.");
         Dragonegg = true ;
         }
         else

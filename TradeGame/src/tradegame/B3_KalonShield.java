@@ -51,16 +51,20 @@ public class B3_KalonShield extends CityDrylagoon implements Guardian  {
     System.out.println("-NOT DRINKING-");
     Greeting();
     }
-    void MagicTeach(){}
+    void MagicTeach(){
+    System.out.println("Kalon: I have noting to teach you traveler");
+    Greeting();
+    }
     public void Report(){
     if(report){
         System.out.println("(1) Report."
-                       + "\n(2) noting.");
+                       + "\n(2) Let talk about something else.");
         switch(ScannerSwitch(2)){
             case 1 : 
             if(reported){
                 System.out.println("Already report");
             }else{
+                System.out.println("You have reported about the murder and got the reward(1000 gold)");
                 PlayerGold = PlayerGold + 1000;
                 Show("Gold",PlayerGold);
                 reported = true;

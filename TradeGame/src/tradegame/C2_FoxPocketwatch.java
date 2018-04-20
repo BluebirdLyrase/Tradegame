@@ -52,7 +52,10 @@ public class C2_FoxPocketwatch extends CityRedapple implements Guardian {
     System.out.println("-NOT DRINKING-");
     Greeting();
     }
-    void Promotion(){}    
+    void Promotion(){
+    System.out.println("Fox:I am not a merchant.");
+    Greeting();
+    }    
     public void Report(){
     if(report){
         System.out.println("(1) Report."
@@ -62,6 +65,7 @@ public class C2_FoxPocketwatch extends CityRedapple implements Guardian {
                 if(reported){
                     System.out.println("Already report");
                 }else{
+                    System.out.println("You have report about the Black merchant");
                     PlayerGold = PlayerGold + 1000;
                     Show("Gold",PlayerGold);
                     reported = true;

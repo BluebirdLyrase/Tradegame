@@ -86,13 +86,14 @@ public class B1_HelenaAshley extends CityDrylagoon implements Explorer {
     }
     void FindingGrimoire(){
         if(PlayerMen>=25){
-        System.out.println("'You found grimoire'"); 
+        System.out.println("'You found the grimoire'"); 
         LearningSecretMagic();
         }else{ 
-        System.out.println("Error 404 not found");
+        System.out.println("'You found nothing'");
         }
     }
     void LearningSecretMagic(){
+        System.out.println("'You have learned the secret magic'");
         if(PlayerMagic[0])Knowledge = true ;
     }
     
